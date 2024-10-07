@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './rakkacash-operateur.component.html',
-  styleUrl: './rakkacash-operateur.component.scss'
+  styleUrl: './rakkacash-operateur.component.scss',
 })
-export class RakkacashOperateurComponent {
-
-}
+export class RakkacashOperateurComponent {}

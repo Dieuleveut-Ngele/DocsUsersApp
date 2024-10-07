@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './guide-flash-marchand.component.html',
-  styleUrl: './guide-flash-marchand.component.scss'
+  styleUrl: './guide-flash-marchand.component.scss',
 })
-export class GuideFlashMarchandComponent {
-
-}
+export class GuideFlashMarchandComponent {}

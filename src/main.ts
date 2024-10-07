@@ -4,9 +4,6 @@ import { importProvidersFrom } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { routes } from './app/app.routes';
 
-
 bootstrapApplication(AppComponent, {
   providers: [importProvidersFrom(RouterModule.forRoot(routes))],
 });
-
-

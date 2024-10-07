@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './operateur-africell-data.component.html',
-  styleUrl: './operateur-africell-data.component.scss'
+  styleUrl: './operateur-africell-data.component.scss',
 })
-export class OperateurAfricellDataComponent {
-
-}
+export class OperateurAfricellDataComponent {}

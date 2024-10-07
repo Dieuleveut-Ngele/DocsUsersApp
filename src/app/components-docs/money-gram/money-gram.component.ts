@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './money-gram.component.html',
-  styleUrl: './money-gram.component.scss'
+  styleUrl: './money-gram.component.scss',
 })
-export class MoneyGramComponent {
-
-}
+export class MoneyGramComponent {}

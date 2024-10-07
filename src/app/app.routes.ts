@@ -21,30 +21,36 @@ import { RakkacashOperateurComponent } from './components-docs/rakkacash-operate
 import { ReportingFlashIdComponent } from './components-docs/reporting-flash-id/reporting-flash-id.component';
 
 export const routes: Routes = [
-    { path: '', component: NavBarComponent },
-    {
-        path: 'docs',
-        component: SidebarDocsComponent,
-        children: [
-          { path: '', component: IntroductionComponent },
-          { path: 'introduction', component: IntroductionComponent },
-          { path: 'bulk-notification', component: BulkNotificationComponent},
-          { path: 'flash-bank', component: GuideFlashBankComponent},
-          { path: 'flash-cash-lite', component: GuideFlashCashLiteComponent},
-          { path: 'flash-marchand', component: GuideFlashMarchandComponent},
-          { path: 'gestion-stock', component: GuideGestionStockComponent},
-          { path: 'operateur-cash', component: OperateurCashinCashoutComponent},
-          { path: 'money-gram', component: MoneyGramComponent},
-          { path: 'mukuru-compliance', component: MukuruComplianceComponent},
-          { path: 'mukuru-finance', component: MukuruFinanceComponent},
-          { path: 'mukuru-operateur', component: MukuruOperateurComponent},
-          { path: 'operateur-africell-data', component: OperateurAfricellDataComponent},
-          { path: 'operateur-vodacom-data', component: OperateurVodacomDataComponent},
-          { path: 'rakka-admin', component: RakkacashAdminComponent},
-          { path: 'rakka-compliance', component: RakkacashComplianceComponent},
-          { path: 'rakka-finance', component: RakkacashFinanceComponent},
-          { path: 'rakka-operateur', component: RakkacashOperateurComponent},
-          { path: 'reporting-flashid', component: ReportingFlashIdComponent},
-        ]
-    }
+  { path: '', component: NavBarComponent },
+  {
+    path: 'docs',
+    component: SidebarDocsComponent,
+    children: [
+      { path: '', component: IntroductionComponent },
+      { path: 'introduction', component: IntroductionComponent },
+      { path: 'bulk-notification', component: BulkNotificationComponent },
+      { path: 'flash-bank', component: GuideFlashBankComponent },
+      { path: 'flash-cash-lite', component: GuideFlashCashLiteComponent },
+      { path: 'flash-marchand', component: GuideFlashMarchandComponent },
+      { path: 'gestion-stock', component: GuideGestionStockComponent },
+      { path: 'operateur-cash', component: OperateurCashinCashoutComponent },
+      { path: 'money-gram', component: MoneyGramComponent },
+      { path: 'mukuru-compliance', component: MukuruComplianceComponent },
+      { path: 'mukuru-finance', component: MukuruFinanceComponent },
+      { path: 'mukuru-operateur', component: MukuruOperateurComponent },
+      {
+        path: 'operateur-africell-data',
+        component: OperateurAfricellDataComponent,
+      },
+      {
+        path: 'operateur-vodacom-data',
+        component: OperateurVodacomDataComponent,
+      },
+      { path: 'rakka-admin', component: RakkacashAdminComponent },
+      { path: 'rakka-compliance', component: RakkacashComplianceComponent },
+      { path: 'rakka-finance', component: RakkacashFinanceComponent },
+      { path: 'rakka-operateur', component: RakkacashOperateurComponent },
+      { path: 'reporting-flashid', component: ReportingFlashIdComponent },
+    ],
+  },
 ];

@@ -5,18 +5,13 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-sidebar-docs',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    NgClass,
-    CommonModule,
-    RouterLink
-  ],
+  imports: [RouterOutlet, NgClass, CommonModule, RouterLink],
   templateUrl: './sidebar-docs.component.html',
-  styleUrl: './sidebar-docs.component.scss'
+  styleUrl: './sidebar-docs.component.scss',
 })
 export class SidebarDocsComponent {
   activeParent: string | null = null;
-  activeRoute: string = ''; 
+  activeRoute: string = '';
 
   constructor(private router: Router) {}
 
@@ -28,7 +23,7 @@ export class SidebarDocsComponent {
       this.activeParent = null;
     }
 
-    this.activeRoute = route; 
+    this.activeRoute = route;
     this.router.navigate(['/docs', route]);
   }
 
@@ -39,8 +34,4 @@ export class SidebarDocsComponent {
   toggleParent(parent: string) {
     this.activeParent = this.activeParent === parent ? null : parent;
   }
-
 }
-
-
-

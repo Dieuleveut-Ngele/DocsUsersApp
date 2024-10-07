@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './bulk-notification.component.html',
-  styleUrl: './bulk-notification.component.scss'
+  styleUrl: './bulk-notification.component.scss',
 })
-export class BulkNotificationComponent {
-
-}
+export class BulkNotificationComponent {}

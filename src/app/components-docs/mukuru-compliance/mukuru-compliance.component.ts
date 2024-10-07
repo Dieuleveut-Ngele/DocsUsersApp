@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './mukuru-compliance.component.html',
-  styleUrl: './mukuru-compliance.component.scss'
+  styleUrl: './mukuru-compliance.component.scss',
 })
-export class MukuruComplianceComponent {
-
-}
+export class MukuruComplianceComponent {}

@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './operateur-cashin-cashout.component.html',
-  styleUrl: './operateur-cashin-cashout.component.scss'
+  styleUrl: './operateur-cashin-cashout.component.scss',
 })
-export class OperateurCashinCashoutComponent {
-
-}
+export class OperateurCashinCashoutComponent {}

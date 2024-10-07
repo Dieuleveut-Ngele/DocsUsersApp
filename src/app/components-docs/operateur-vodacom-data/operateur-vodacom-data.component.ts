@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './operateur-vodacom-data.component.html',
-  styleUrl: './operateur-vodacom-data.component.scss'
+  styleUrl: './operateur-vodacom-data.component.scss',
 })
-export class OperateurVodacomDataComponent {
-
-}
+export class OperateurVodacomDataComponent {}
