@@ -1,0 +1,247 @@
+<div class="main-container">
+    <div class="sidebar">
+      <ul>
+        <li
+          (click)="navigateTo('introduction')"
+          [ngClass]="{ selected: activeRoute === 'introduction' }"
+        >
+          Introduction
+          <!-- <ul *ngIf="activeParent === 'alla-guide'">
+              <li><a [routerLink]="['alla-guide/lorem']">Lorem</a></li>
+              <li><a [routerLink]="['ipsum']">Ipsum</a></li>
+              <li><a [routerLink]="['dolor']">Dolor</a></li>   
+          </ul> -->
+        </li>
+  
+        <li
+          (click)="navigateTo('bulk-notification')"
+          [ngClass]="{ selected: activeRoute === 'bulk-notification' }"
+        >
+          Bulk Notification
+        </li>
+        <li
+          (click)="navigateTo('flash-pos')"
+          [ngClass]="{ selected: activeRoute === 'flash-pos' }"
+        >
+          Operateur Cash In & Cash Out
+        </li>
+        <li
+          (click)="navigateTo('flash-cash-lite')"
+          [ngClass]="{ selected: activeRoute === 'flash-cash-lite' }"
+        >
+          Guide Flash Cash Lite
+        </li>
+        <li
+          (click)="navigateTo('flash-marchant')"
+          [ngClass]="{ selected: activeRoute === 'flash-marchant' }"
+        >
+          Guide Flash Marchand
+        </li>
+        <li
+          (click)="navigateTo('flashticket-pos')"
+          [ngClass]="{ selected: activeRoute === 'flashticket-pos' }"
+        >
+          Guide Flash Ticket Flash Pos
+        </li>
+        <li
+          (click)="navigateTo('gestion-stock')"
+          [ngClass]="{ selected: activeRoute === 'gestion-stock' }"
+        >
+          Guide Gestion Stock
+        </li>
+        <li
+          (click)="navigateTo('flashbank')"
+          [ngClass]="{ selected: activeRoute === 'flashbank' }"
+        >
+          Guide FlashBank
+        </li>
+        <li
+          (click)="navigateTo('operateur-africell-data')"
+          [ngClass]="{ selected: activeRoute === 'operateur-africell-data' }"
+        >
+          Guide Operateur Africell Data
+        </li>
+        <li
+          (click)="navigateTo('operateur-gpt-visa')"
+          [ngClass]="{ selected: activeRoute === 'operateur-gpt-visa' }"
+        >
+          Guide Operateur GPT VISA
+        </li>
+        <li
+          (click)="navigateTo('operateur-mtn')"
+          [ngClass]="{ selected: activeRoute === 'operateur-mtn' }"
+        >
+          Guide Operateur MTN
+        </li>
+        <li
+          (click)="navigateTo('operateur-telco')"
+          [ngClass]="{ selected: activeRoute === 'operateur-telco' }"
+        >
+          Guide Operateur Telco
+        </li>
+        <li
+          (click)="navigateTo('operateur-vas')"
+          [ngClass]="{ selected: activeRoute === 'operateur-vas' }"
+        >
+          Guide Operateur VAS
+        </li>
+        <li
+          (click)="navigateTo('operateur-vodacom-data')"
+          [ngClass]="{ selected: activeRoute === 'operateur-vodacom-data' }"
+        >
+          Guide Operateur Vodacom Data
+        </li>
+        <li
+          (click)="navigateTo('parametrage-compta')"
+          [ngClass]="{ selected: activeRoute === 'parametrage-compta' }"
+        >
+          Guide Parametrage Compta
+        </li>
+        <li
+          (click)="navigateTo('guide-tv')"
+          [ngClass]="{ selected: activeRoute === 'guide-tv' }"
+        >
+          Guide TV
+        </li>
+        <li
+          (click)="navigateTo('guide-paytax')"
+          [ngClass]="{ selected: activeRoute === 'guide-paytax' }"
+        >
+          Guide Utilisateur PAYTAX
+        </li>
+        <li
+          (click)="navigateTo('western-union')"
+          [ngClass]="{ selected: activeRoute === 'western-union' }"
+        >
+          Guide WU
+        </li>
+        <li
+          (click)="navigateTo('money-gram')"
+          [ngClass]="{ selected: activeRoute === 'money-gram' }"
+        >
+          MoneyGram
+        </li>
+        <li
+          (click)="navigateTo('mukuru')"
+          [ngClass]="{ selected: activeRoute === 'mukuru' }"
+        >
+          Mukuru
+        </li>
+        <li
+          (click)="navigateTo('mukuru-compliance')"
+          [ngClass]="{ selected: activeRoute === 'mukuru-compliance' }"
+        >
+          Mukuru Compliance
+        </li>
+        <li
+          (click)="navigateTo('mukuru-finance')"
+          [ngClass]="{ selected: activeRoute === 'mukuru-finance' }"
+        >
+          Mukuru Finance
+        </li>
+        <li
+          (click)="navigateTo('mukuru-operateur')"
+          [ngClass]="{ selected: activeRoute === 'mukuru-operateur' }"
+        >
+          Mukuru Operateur
+        </li>
+        <li
+          (click)="navigateTo('rakkacash')"
+          [ngClass]="{ selected: activeRoute === 'rakkacash' }"
+        >
+          RakkaCash 
+        </li>
+        <li
+          (click)="navigateTo('rakka-admin')"
+          [ngClass]="{ selected: activeRoute === 'rakka-admin' }"
+        >
+          RakkaCash Admin
+        </li>
+        <li
+          (click)="navigateTo('rakka-compliance')"
+          [ngClass]="{ selected: activeRoute === 'rakka-compliance' }"
+        >
+          RakkaCash Compliance
+        </li>
+        <li
+          (click)="navigateTo('rakka-finance')"
+          [ngClass]="{ selected: activeRoute === 'rakka-finance' }"
+        >
+          RakkaCash Finance
+        </li>
+        <li
+          (click)="navigateTo('rakka-operateur')"
+          [ngClass]="{ selected: activeRoute === 'rakka-operateur' }"
+        >
+          RakkaCash Operateur
+        </li>
+        <li
+          (click)="navigateTo('reporting-flashid')"
+          [ngClass]="{ selected: activeRoute === 'reporting-flashid' }"
+        >
+          Reporting Flash Id
+        </li>
+        <li
+          (click)="navigateTo('ria')"
+          [ngClass]="{ selected: activeRoute === 'ria' }"
+        >
+          RIA
+        </li>
+        <li
+          (click)="navigateTo('ria-admin')"
+          [ngClass]="{ selected: activeRoute === 'ria-admin' }"
+        >
+          Ria Admin
+        </li>
+        <li
+          (click)="navigateTo('ria-compliance')"
+          [ngClass]="{ selected: activeRoute === 'ria-compliance' }"
+        >
+          Ria Compliance
+        </li>
+        <li
+          (click)="navigateTo('ria-finance')"
+          [ngClass]="{ selected: activeRoute === 'ria-finance' }"
+        >
+          Ria Finance
+        </li>
+        <li
+          (click)="navigateTo('ria-operateur')"
+          [ngClass]="{ selected: activeRoute === 'ria-operateur' }"
+        >
+          Ria Operateur
+        </li>
+        <li
+          (click)="navigateTo('sababalar')"
+          [ngClass]="{ selected: activeRoute === 'sababalar' }"
+        >
+          Sababalar
+        </li>
+        <li
+          (click)="navigateTo('saba-admin')"
+          [ngClass]="{ selected: activeRoute === 'saba-admin' }"
+        >
+          Sababalar Admin
+        </li>
+        <li
+          (click)="navigateTo('saba-compliance')"
+          [ngClass]="{ selected: activeRoute === 'saba-compliance' }"
+        >
+          Sababalar Compliance
+        </li>
+        <li
+          (click)="navigateTo('saba-finance')"
+          [ngClass]="{ selected: activeRoute === 'saba-finance' }"
+        >
+          Sababalar Finance
+        </li>
+      </ul>
+    </div>
+  
+    <div class="content">
+      
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
+  
