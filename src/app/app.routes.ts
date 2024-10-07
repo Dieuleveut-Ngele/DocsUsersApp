@@ -7,6 +7,7 @@ import { GuideFlashBankComponent } from './components-docs/guide-flash-bank/guid
 import { GuideFlashCashLiteComponent } from './components-docs/guide-flash-cash-lite/guide-flash-cash-lite.component';
 import { GuideFlashMarchandComponent } from './components-docs/guide-flash-marchand/guide-flash-marchand.component';
 import { GuideGestionStockComponent } from './components-docs/guide-gestion-stock/guide-gestion-stock.component';
+import { OperateurCashinCashoutComponent } from './components-docs/operateur-cashin-cashout/operateur-cashin-cashout.component';
 
 export const routes: Routes = [
     { path: '', component: NavBarComponent },
@@ -21,6 +22,7 @@ export const routes: Routes = [
           { path: 'flash-cash-lite', component: GuideFlashCashLiteComponent},
           { path: 'flash-marchand', component: GuideFlashMarchandComponent},
           { path: 'gestion-stock', component: GuideGestionStockComponent},
+          { path: 'operateur-cash', component: OperateurCashinCashoutComponent},
         ]
     }
 ];
