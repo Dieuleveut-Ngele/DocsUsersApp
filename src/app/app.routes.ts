@@ -26,9 +26,12 @@ import { RiaOperateurComponent } from './components-docs/ria-operateur/ria-opera
 import { SababalarAdminComponent } from './components-docs/sababalar-admin/sababalar-admin.component';
 import { SababalarComplianceComponent } from './components-docs/sababalar-compliance/sababalar-compliance.component';
 import { SababalarFinanceComponent } from './components-docs/sababalar-finance/sababalar-finance.component';
+import { WesternUnionComponent } from './components-docs/western-union/western-union.component';
+import { FaqComponent } from './pages/faq/faq.component';
 
 export const routes: Routes = [
   { path: '', component: NavBarComponent },
+  { path: 'faq', component: FaqComponent},
   {
     path: 'docs',
     component: SidebarDocsComponent,
@@ -66,7 +69,8 @@ export const routes: Routes = [
       { path: 'saba-admin', component: SababalarAdminComponent},
       { path: 'saba-compliance', component: SababalarComplianceComponent},
       { path: 'saba-finance', component: SababalarFinanceComponent},
-      
+      { path: 'western-union', component: WesternUnionComponent},
+
 
     ],
   },

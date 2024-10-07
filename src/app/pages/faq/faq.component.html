@@ -1,0 +1,16 @@
+<h2>Foire aux Questions</h2>
+<div class="faq-container">
+    
+    <div *ngFor="let item of faqItems" class="faq-item">
+      <div class="faq-question" (click)="toggleAnswer(item)">
+        <p>{{ item.question }}</p>
+        <span class="toggle-icon">
+          {{ item.open ? '▲' : '▼' }}
+        </span>
+      </div>
+      <div class="faq-answer" *ngIf="item.open">
+        <p>{{ item.answer }}</p>
+      </div>
+    </div>
+  </div>
+  
