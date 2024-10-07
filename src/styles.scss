@@ -1,5 +1,26 @@
+// * {
+//   // font-family: Roboto, Helvetica, sans-serif;
+//   // font-family: "Poppins", sans-serif;
+//   // font-weight: weight;
+//   // font-style: normal;
+// }
 
-body {
+// * {
+//   font-family: "DM Sans", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: weight;
+//   font-style: normal;  
+// }
+
+* {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+  
+  body {
     margin: 0;
     padding: 0;
   }
@@ -52,4 +73,42 @@ body {
     transform 0.3s ease,
     box-shadow 0.3s ease;
   }
+  
+  .button-dowload {
+    background-color: #4caf50;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 250px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .download-pdf {
+    text-decoration: none;
+  }
+  
+  .note {  
+    background-color: #fff3cd;  
+    border: 1px solid #ffeeba;  
+    border-radius: 5px;  
+    padding: 15px;  
+    margin-bottom: 20px;  
+  }  
+  .note h2 {  
+    margin: 0 0 10px;  
+  }  
+  .note p {  
+    margin: 0;  
+  }  
+  .second-title {    
+    margin-top: 25px;  
+    border-bottom: 1px solid #000;  
+    padding-bottom: 5px;  
+  } 
+  
   
