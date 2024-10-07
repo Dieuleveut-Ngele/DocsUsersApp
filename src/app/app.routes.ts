@@ -23,6 +23,7 @@ import { RiaAdminComponent } from './components-docs/ria-admin/ria-admin.compone
 import { RiaComplianceComponent } from './components-docs/ria-compliance/ria-compliance.component';
 import { RiaFinanceComponent } from './components-docs/ria-finance/ria-finance.component';
 import { RiaOperateurComponent } from './components-docs/ria-operateur/ria-operateur.component';
+import { SababalarAdminComponent } from './components-docs/sababalar-admin/sababalar-admin.component';
 
 export const routes: Routes = [
   { path: '', component: NavBarComponent },
@@ -59,6 +60,9 @@ export const routes: Routes = [
       { path: 'ria-compliance', component: RiaComplianceComponent},
       { path: 'ria-finance', component: RiaFinanceComponent},
       { path: 'ria-operateur', component: RiaOperateurComponent},
+
+      { path: 'saba-admin', component: SababalarAdminComponent},
+      
     ],
   },
 ];
