@@ -15,7 +15,8 @@ export class FaqComponent {
   faqItems = [
     {
       question: "Qu'est-ce que Common Interface ?",
-      answer: "Common intarface est une plateforme destinée dfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfgggggggggggggggggggggggggggggggggggggggggggggggfhuhvdfhhsjgjhgjhfgsdsjkhjhskjdhfkjhssfffffvfvv",
+      answer: "Common intarface est une plateforme destinée...",
+      paragraph: "Common intarface est une plateforme destinée intarface est une plateforme destinée",
       open: false
     },
     {
