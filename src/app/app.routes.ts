@@ -11,6 +11,7 @@ import { OperateurCashinCashoutComponent } from './components-docs/operateur-cas
 import { MoneyGramComponent } from './components-docs/money-gram/money-gram.component';
 import { MukuruComplianceComponent } from './components-docs/mukuru-compliance/mukuru-compliance.component';
 import { MukuruFinanceComponent } from './components-docs/mukuru-finance/mukuru-finance.component';
+import { MukuruOperateurComponent } from './components-docs/mukuru-operateur/mukuru-operateur.component';
 
 export const routes: Routes = [
     { path: '', component: NavBarComponent },
@@ -29,6 +30,7 @@ export const routes: Routes = [
           { path: 'money-gram', component: MoneyGramComponent},
           { path: 'mukuru-compliance', component: MukuruComplianceComponent},
           { path: 'mukuru-finance', component: MukuruFinanceComponent},
+          { path: 'mukuru-operateur', component: MukuruOperateurComponent},
         ]
     }
 ];
