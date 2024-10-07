@@ -5,6 +5,7 @@ import { IntroductionComponent } from './components-docs/introduction/introducti
 import { BulkNotificationComponent } from './components-docs/bulk-notification/bulk-notification.component';
 import { GuideFlashBankComponent } from './components-docs/guide-flash-bank/guide-flash-bank.component';
 import { GuideFlashCashLiteComponent } from './components-docs/guide-flash-cash-lite/guide-flash-cash-lite.component';
+import { GuideFlashMarchandComponent } from './components-docs/guide-flash-marchand/guide-flash-marchand.component';
 
 export const routes: Routes = [
     { path: '', component: NavBarComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
           { path: 'bulk-notification', component: BulkNotificationComponent},
           { path: 'flash-bank', component: GuideFlashBankComponent},
           { path: 'flash-cash-lite', component: GuideFlashCashLiteComponent},
+          { path: 'flash-marchand', component: GuideFlashMarchandComponent}
         ]
     }
 ];
