@@ -21,6 +21,7 @@ import { RakkacashOperateurComponent } from './components-docs/rakkacash-operate
 import { ReportingFlashIdComponent } from './components-docs/reporting-flash-id/reporting-flash-id.component';
 import { RiaAdminComponent } from './components-docs/ria-admin/ria-admin.component';
 import { RiaComplianceComponent } from './components-docs/ria-compliance/ria-compliance.component';
+import { RiaFinanceComponent } from './components-docs/ria-finance/ria-finance.component';
 
 export const routes: Routes = [
   { path: '', component: NavBarComponent },
@@ -55,6 +56,7 @@ export const routes: Routes = [
       { path: 'reporting-flashid', component: ReportingFlashIdComponent },
       { path: 'ria-admin', component: RiaAdminComponent},
       { path: 'ria-compliance', component: RiaComplianceComponent},
+      { path: 'ria-finance', component: RiaFinanceComponent},
     ],
   },
 ];
