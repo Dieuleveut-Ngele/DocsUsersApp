@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial, sans-serif";
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+  }
+  
+  .content img {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    max-width: 120%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  }
+  
+  .content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .title {
+    padding: 20px;
+    text-align: center;
+    background-color: #dcdde1;
+    border-radius: 5px;
+  }
+  
+  .avatar {
+    width: 100%;
+    height: auto;
+    max-width: 120%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  }
+  
