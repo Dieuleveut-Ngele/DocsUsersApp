@@ -14,6 +14,7 @@ import { MukuruFinanceComponent } from './components-docs/mukuru-finance/mukuru-
 import { MukuruOperateurComponent } from './components-docs/mukuru-operateur/mukuru-operateur.component';
 import { OperateurAfricellDataComponent } from './components-docs/operateur-africell-data/operateur-africell-data.component';
 import { OperateurVodacomDataComponent } from './components-docs/operateur-vodacom-data/operateur-vodacom-data.component';
+import { RakkacashAdminComponent } from './components-docs/rakkacash-admin/rakkacash-admin.component';
 
 export const routes: Routes = [
     { path: '', component: NavBarComponent },
@@ -35,6 +36,7 @@ export const routes: Routes = [
           { path: 'mukuru-operateur', component: MukuruOperateurComponent},
           { path: 'operateur-africell-data', component: OperateurAfricellDataComponent},
           { path: 'operateur-vodacom-data', component: OperateurVodacomDataComponent},
+          { path: 'rakka-admin', component: RakkacashAdminComponent},
         ]
     }
 ];
