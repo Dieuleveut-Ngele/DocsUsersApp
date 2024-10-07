@@ -22,6 +22,7 @@ import { ReportingFlashIdComponent } from './components-docs/reporting-flash-id/
 import { RiaAdminComponent } from './components-docs/ria-admin/ria-admin.component';
 import { RiaComplianceComponent } from './components-docs/ria-compliance/ria-compliance.component';
 import { RiaFinanceComponent } from './components-docs/ria-finance/ria-finance.component';
+import { RiaOperateurComponent } from './components-docs/ria-operateur/ria-operateur.component';
 
 export const routes: Routes = [
   { path: '', component: NavBarComponent },
@@ -57,6 +58,7 @@ export const routes: Routes = [
       { path: 'ria-admin', component: RiaAdminComponent},
       { path: 'ria-compliance', component: RiaComplianceComponent},
       { path: 'ria-finance', component: RiaFinanceComponent},
+      { path: 'ria-operateur', component: RiaOperateurComponent},
     ],
   },
 ];
