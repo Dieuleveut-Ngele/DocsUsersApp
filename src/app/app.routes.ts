@@ -12,6 +12,7 @@ import { MoneyGramComponent } from './components-docs/money-gram/money-gram.comp
 import { MukuruComplianceComponent } from './components-docs/mukuru-compliance/mukuru-compliance.component';
 import { MukuruFinanceComponent } from './components-docs/mukuru-finance/mukuru-finance.component';
 import { MukuruOperateurComponent } from './components-docs/mukuru-operateur/mukuru-operateur.component';
+import { OperateurAfricellDataComponent } from './components-docs/operateur-africell-data/operateur-africell-data.component';
 
 export const routes: Routes = [
     { path: '', component: NavBarComponent },
@@ -31,6 +32,7 @@ export const routes: Routes = [
           { path: 'mukuru-compliance', component: MukuruComplianceComponent},
           { path: 'mukuru-finance', component: MukuruFinanceComponent},
           { path: 'mukuru-operateur', component: MukuruOperateurComponent},
+          { path: 'operateur-africell-data', component: OperateurAfricellDataComponent},
         ]
     }
 ];
