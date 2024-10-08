@@ -29,10 +29,12 @@ import { SababalarFinanceComponent } from './components-docs/sababalar-finance/s
 import { WesternUnionComponent } from './components-docs/western-union/western-union.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { HomeComponent } from './pages/home/home/home.component';
+import { GlossaireComponent } from './pages/glossaire/glossaire.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'faq', component: FaqComponent},
+  { path: 'glossaire', component: GlossaireComponent},
   {
     path: 'docs',
     component: SidebarDocsComponent,
