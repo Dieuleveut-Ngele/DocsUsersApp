@@ -28,9 +28,10 @@ import { SababalarComplianceComponent } from './components-docs/sababalar-compli
 import { SababalarFinanceComponent } from './components-docs/sababalar-finance/sababalar-finance.component';
 import { WesternUnionComponent } from './components-docs/western-union/western-union.component';
 import { FaqComponent } from './pages/faq/faq.component';
+import { HomeComponent } from './pages/home/home/home.component';
 
 export const routes: Routes = [
-  { path: '', component: NavBarComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'faq', component: FaqComponent},
   {
     path: 'docs',
