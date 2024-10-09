@@ -25,23 +25,14 @@ header {
   vertical-align: middle;
 }
 
-nav a {
-  margin: 0 10px;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 300;
-}
-
-.nav-links a.active {
-  font-weight: bold;
-}
-
 .nav-links a {
   display: inline-block;
   color: #ffffff;
   margin: 0 0.55em;
   padding: 0 0.85em;
+  padding-bottom: 5px;
   text-decoration: none;
+  font-weight: 300;
   background-image: linear-gradient(to right, currentColor, currentColor);
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -50,14 +41,19 @@ nav a {
 }
 
 .nav-links a:hover {
-  color: rgb(255, 196, 1);
-  background-size: 75% 1px;
-  padding-bottom: 5px;
+  color: #FFD700;
+
+}
+
+.nav-item.active {
+  color: #FFD700; 
+  font-weight: bold;
+  border-bottom: 1px solid #FFD700; 
 }
 
 .contact-btn,
 .start-btn {
-  background-color: #ffcc00;
+  background-color: #FFD700;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -88,13 +84,13 @@ nav a {
 }
 
 .search-input:focus {
-  border: 1px solid #ffc403;
+  border: 1px solid #FFD700;
   background: #fff;
   outline: 0;
 }
 
 .search-btn {
-  background-color: #ffc403;
+  background-color: #FFD700;
   border: none;
   cursor: pointer;
   padding: 8px;
@@ -106,19 +102,5 @@ nav a {
 }
 
 
-
-ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    padding: 5px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  li:hover {
-    background-color: #f0f0f0;
-    cursor: pointer;
-  }
+ 
   

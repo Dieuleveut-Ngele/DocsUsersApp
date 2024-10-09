@@ -1,6 +1,6 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink, Router } from '@angular/router';
+import { RouterLink, Router, RouterLinkActive } from '@angular/router';
 import { HeroSectionComponent } from '../hero-section/hero-section.component';
 import { filter } from 'rxjs';
 import { NgModel } from '@angular/forms';
@@ -8,7 +8,7 @@ import { NgModel } from '@angular/forms';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [RouterLink, NgClass, HeroSectionComponent, CommonModule, ],
+  imports: [RouterLink, NgClass, HeroSectionComponent, CommonModule, RouterLinkActive],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
 })
