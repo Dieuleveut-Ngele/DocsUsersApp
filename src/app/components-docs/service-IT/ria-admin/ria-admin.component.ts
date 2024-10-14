@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PdfExportService } from '../../services/pdf-export.service';
+import { PdfExportService } from '../../../services/pdf-export.service';
 
 @Component({
   selector: 'app-ria-admin',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PdfExportService } from '../../services/pdf-export.service';
-import html2pdf from 'html2pdf.js';
+import { PdfExportService } from '../../../services/pdf-export.service';
+
 
 @Component({
   selector: 'app-bulk-notification',
