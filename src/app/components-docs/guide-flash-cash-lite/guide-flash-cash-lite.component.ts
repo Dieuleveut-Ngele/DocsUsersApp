@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PdfExportService } from '../../services/pdf-export.service';
 
 @Component({
   selector: 'app-guide-flash-cash-lite',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
   templateUrl: './guide-flash-cash-lite.component.html',
   styleUrl: './guide-flash-cash-lite.component.scss',
 })
-export class GuideFlashCashLiteComponent {}
+export class GuideFlashCashLiteComponent {
+
+  constructor(private pdfExportService: PdfExportService) {}
+  downloadPDF() {
+    this.pdfExportService.exportToPDF('doc-content', 'Guide Flash Cash Lite');
+  }
+
+}

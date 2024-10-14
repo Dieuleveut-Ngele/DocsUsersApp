@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PdfExportService } from '../../services/pdf-export.service';
 
 @Component({
   selector: 'app-sababalar-compliance',
@@ -9,4 +10,8 @@ import { Component } from '@angular/core';
 })
 export class SababalarComplianceComponent {
 
+  constructor(private pdfExportService: PdfExportService) {}
+  downloadPDF() {
+    this.pdfExportService.exportToPDF('doc-content', 'Guide Sababalar Compliance');
+  }
 }
