@@ -3,56 +3,56 @@
     <div class="sidebar">
       <ul>
         <!-- Dossier Opérateur Guides -->
-        <li (click)="toggleParent('operateur-guides')" [ngClass]="{ selected: activeParent === 'operateur-guides' }">
+        <li (click)="toggleParent('conformite')" [ngClass]="{ selected: activeParent === 'conformite' }">
             <img src="folder.png" alt="">
-            Opérateur Guides  
+            Service Conformité 
         </li>
-        <ul *ngIf="activeParent === 'operateur-guides'">
-          <li *ngFor="let guide of operateurGuides" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
+        <ul *ngIf="activeParent === 'conformite'">
+          <li *ngFor="let guide of conformite" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
             {{ guide.name }}
           </li>
         </ul>
   
         <!-- Dossier Flash Guides -->
-        <li (click)="toggleParent('flash-guides')" [ngClass]="{ selected: activeParent === 'flash-guides' }">
+        <li (click)="toggleParent('marketing')" [ngClass]="{ selected: activeParent === 'marketing' }">
             <img src="folder.png" alt="">
-          Flash Guides
+          Service Marketing
         </li>
-        <ul *ngIf="activeParent === 'flash-guides'">
-          <li *ngFor="let guide of flashGuides" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
+        <ul *ngIf="activeParent === 'marketing'">
+          <li *ngFor="let guide of marketing" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
             {{ guide.name }}
           </li>
         </ul>
   
         <!-- Dossier RakkaCash -->
-        <li (click)="toggleParent('rakkacash')" [ngClass]="{ selected: activeParent === 'rakkacash' }">
+        <li (click)="toggleParent('IT')" [ngClass]="{ selected: activeParent === 'IT' }">
             <img src="folder.png" alt="">
-          RakkaCash
+          Service IT
         </li>
-        <ul *ngIf="activeParent === 'rakkacash'">
-          <li *ngFor="let guide of rakkacashGuides" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
+        <ul *ngIf="activeParent === 'IT'">
+          <li *ngFor="let guide of it" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
             {{ guide.name }}
           </li>
         </ul>
   
         <!-- Dossier Mukuru -->
-        <li (click)="toggleParent('mukuru')" [ngClass]="{ selected: activeParent === 'mukuru' }">
+        <li (click)="toggleParent('finance')" [ngClass]="{ selected: activeParent === 'finance' }">
             <img src="folder.png" alt="">
-          Mukuru
+          Service Finance
         </li>
-        <ul *ngIf="activeParent === 'mukuru'">
-          <li *ngFor="let guide of mukuruGuides" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
+        <ul *ngIf="activeParent === 'finance'">
+          <li *ngFor="let guide of finance" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
             {{ guide.name }}
           </li>
         </ul>
   
         <!-- Dossier Autres Services -->
-        <li (click)="toggleParent('autres-services')" [ngClass]="{ selected: activeParent === 'autres-services' }">
+        <li (click)="toggleParent('csc-ops')" [ngClass]="{ selected: activeParent === 'csc-ops' }">
             <img src="folder.png" alt="">
-          Autres Services
+          Service CSC OPS
         </li>
-        <ul *ngIf="activeParent === 'autres-services'">
-          <li *ngFor="let guide of autresServices" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
+        <ul *ngIf="activeParent === 'csc-ops'">
+          <li *ngFor="let guide of cscOps" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
             {{ guide.name }}
           </li>
         </ul>

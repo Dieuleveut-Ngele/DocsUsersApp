@@ -15,66 +15,52 @@ export class SidebarDocsComponent {
   activeParent: string | null = null;
   activeRoute: string = '';
 
-  operateurGuides = [
-    { name: 'Operateur Cash In & Cash Out', route: 'operateur-cash' },
-    { name: 'Guide Operateur Africell Data', route: 'operateur-africell-data' },
-    { name: 'Guide Operateur GPT VISA', route: 'operateur-gpt-visa' },
-    { name: 'Guide Operateur MTN', route: 'operateur-mtn' },
-    { name: 'Guide Operateur Telco', route: 'operateur-telco' },
-    { name: 'Guide Operateur VAS', route: 'operateur-vas' },
-    { name: 'Guide Operateur Vodacom Data', route: 'operateur-vodacom-data' }
+  conformite = [
+    { name: 'RakkaCash Compliance', route: 'rakka-compliance' },
+    { name: 'Mukuru Compliance', route: 'mukuru-compliance' },
+    { name: 'Ria Compliance', route: 'ria-compliance' },
+    { name: 'Sababalar Compliance', route: 'saba-compliance' },
+    
   ];
 
-  flashGuides = [
+  marketing = [
+    { name: 'Bulk Notification', route: 'bulk-notification' },
+    { name: 'Flash Contact', route: 'flash-contact' },
+   
+  ];
+
+  it = [
+    { name: 'Reporting Flash Id', route: 'reporting-flashid' },
+    { name: 'RakkaCash Admin', route: 'rakka-admin' },
+    { name: 'Sababalar Admin', route: 'saba-admin' },
+    { name: 'Ria Admin', route: 'ria-admin' }, 
+  ];
+
+  finance = [ 
+    { name: 'Mukuru Finance', route: 'mukuru-finance' },
+    { name: 'RakkaCash Finance', route: 'rakka-finance' },
+    { name: 'Sababalar Finance', route: 'saba-finance' },
+    { name: 'Ria Finance', route: 'ria-finance' },
+    { name: 'Parametrage Compta', route: 'parametrage-compta' }
+    
+  ];
+
+  cscOps = [
     { name: 'Guide Flash Cash Lite', route: 'flash-cash-lite' },
     { name: 'Guide Flash Marchand', route: 'flash-marchand' },
-    { name: 'Guide Flash Ticket Flash Pos', route: 'flashticket-pos' },
     { name: 'Guide FlashBank', route: 'flash-bank' },
-    { name: 'Guide Gestion Stock', route: 'gestion-stock' }
-  ];
-
-  rakkacashGuides = [
-    { name: 'RakkaCash', route: 'rakkacash' },
-    { name: 'RakkaCash Admin', route: 'rakka-admin' },
-    { name: 'RakkaCash Compliance', route: 'rakka-compliance' },
-    { name: 'RakkaCash Finance', route: 'rakka-finance' },
-    { name: 'RakkaCash Operateur', route: 'rakka-operateur' }
-  ];
-
-  mukuruGuides = [
-    { name: 'Mukuru', route: 'mukuru' },
-    { name: 'Mukuru Compliance', route: 'mukuru-compliance' },
-    { name: 'Mukuru Finance', route: 'mukuru-finance' },
-    { name: 'Mukuru Operateur', route: 'mukuru-operateur' }
-  ];
-
-  autresServices = [
-    { name: 'Bulk Notification', route: 'bulk-notification' },
-    { name: 'Guide TV', route: 'guide-tv' },
+    { name: 'Guide Gestion Stock', route: 'gestion-stock' },
+    { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
+    { name: 'RakkaCash Operateur', route: 'rakka-operateur' },
+    { name: 'Ria Operateur', route: 'ria-operateur' },
+    { name: 'Operateur Cash In & Cash Out', route: 'operateur-cash' },
+    { name: 'Guide Operateur Africell Data', route: 'operateur-africell-data' },
+    { name: 'Guide Operateur Telco', route: 'operateur-telco' },
+    { name: 'Guide Operateur VAS', route: 'operateur-vas' },
+    { name: 'Guide Operateur Vodacom Data', route: 'operateur-vodacom-data' },
     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
-    { name: 'Reporting Flash Id', route: 'reporting-flashid' },
-    { name: 'Western Union', route: 'western-union' },
     { name: 'MoneyGram', route: 'money-gram' },
-    { name: 'RIA', route: 'ria' },
-    { name: 'Sababalar', route: 'sababalar' },
-
-    { name: 'Bulk Notification', route: 'bulk-notification' },
-    { name: 'Guide TV', route: 'guide-tv' },
-    { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
-    { name: 'Reporting Flash Id', route: 'reporting-flashid' },
-    { name: 'Western Union', route: 'western-union' },
-    { name: 'MoneyGram', route: 'money-gram' },
-    { name: 'RIA', route: 'ria' },
-    { name: 'Sababalar', route: 'sababalar' },
-
-    { name: 'Bulk Notification', route: 'bulk-notification' },
-    { name: 'Guide TV', route: 'guide-tv' },
-    { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
-    { name: 'Reporting Flash Id', route: 'reporting-flashid' },
-    { name: 'Western Union', route: 'western-union' },
-    { name: 'MoneyGram', route: 'money-gram' },
-    { name: 'RIA', route: 'ria' },
-    { name: 'Sababalar', route: 'sababalar' }
+    { name: 'Western Union', route: 'western-union' },  
   ];
 
   constructor(private router: Router) {}
