@@ -1,4 +1,4 @@
-<div class="title">
+ <div class="title">
   <h3>Bulk Notification</h3>
 </div>
 
@@ -50,6 +50,7 @@
   <img
     src="https://res.cloudinary.com/dxwcrbqes/image/upload/v1725288599/Bulk-forms_sqoipo.png"
     alt=""
+    crossorigin="anonymous"
   />
   <p class="note">
     NB: le statut <strong>Opération Échouée</strong> sera affiché si est
@@ -82,15 +83,6 @@
   </p>
 </div>
 
-<div>
-  <a class="download-pdf">
-    <button class="button-dowload">
-      <!-- <img
-          src="https://res.cloudinary.com/dxwcrbqes/image/upload/v1726047851/telecharger-le-bouton-circulaire_s8mb9b.png"
-          alt="Download PDF"
-          style="width: 23px; height: 23px; margin-right: 10px"
-        /> -->
-      Télécharger le PDF
-    </button>
-  </a>
-</div>
+<button (click)="exportToPDF()">Télécharger en PDF</button>
+<!-- <button (click)="generatePDF()">Télécharger PDF</button> -->
+
