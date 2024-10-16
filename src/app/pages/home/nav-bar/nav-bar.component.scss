@@ -42,19 +42,19 @@ header {
 }
 
 .nav-links a:hover {
-  color: #ffe600;
+  color: #ffc700;
 
 }
 
 .nav-item.active {
-  color: #ffe600; 
+  color: #ffc700; 
   font-weight: bold;
-  border-bottom: 1px solid #ffe600; 
+  border-bottom: 1px solid #ffc700; 
 }
 
 .contact-btn,
 .start-btn {
-  background-color: #ffe600;
+  background-color: #ffc700;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -85,13 +85,13 @@ header {
 }
 
 .search-input:focus {
-  border: 1px solid #ffe600;
+  border: 1px solid #ffc700;
   background: #fff;
   outline: 0;
 }
 
 .search-btn {
-  background-color: #ffe600;
+  background-color: #ffc700;
   border: none;
   cursor: pointer;
   padding: 8px;

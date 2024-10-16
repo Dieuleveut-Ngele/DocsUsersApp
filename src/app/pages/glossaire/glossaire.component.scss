@@ -1,6 +1,18 @@
 .glossary-container {
-    padding: 20px;
-    background-color: #f9f9f9;
+    padding: 100px;
+    background-color: hsl(0, 0%, 98%);
+    padding-left: 170px;
+    padding-right: 170px;
+  }
+  
+  h1{
+    margin: 60px;
+    text-align: center;
+    font-size: 2rem;
+    background: linear-gradient(to right, black, rgb(255, 199, 0));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+       font-size: 48px;
   }
   
   .glossary-item {

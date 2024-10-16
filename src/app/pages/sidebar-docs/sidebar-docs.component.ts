@@ -24,8 +24,8 @@ export class SidebarDocsComponent {
   ];
 
   marketing = [
-    { name: 'Bulk Notification', route: 'bulk-notification' },
     { name: 'Flash Contact', route: 'flash-contact' },
+    { name: 'Bulk Notification', route: 'bulk-notification' },
    
   ];
 
