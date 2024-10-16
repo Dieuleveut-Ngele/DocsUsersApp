@@ -10,20 +10,24 @@ import { Component } from '@angular/core';
 })
 export class GlossaireComponent {
   glossary = [
-    { term: 'API', definition: 'Interface de programmation qui permet à deux applications de communiquer entre elles.' },
-    { term: 'Frontend', definition: 'La partie visible d’une application avec laquelle les utilisateurs interagissent.' },
-    { term: 'Backend', definition: 'La partie d’un système qui gère les données et la logique derrière une application.' },
-    { term: 'Component', definition: 'Un élément modulaire réutilisable dans une application Angular.' },
-    { term: 'Service', definition: 'Une classe qui gère la logique métier et les données partagées dans l’application.' },
-    { term: 'SAG', definition: 'Une classe qui gère la logique métier et les données partagées dans l’application.' },
-    { term: 'Service', definition: 'Une classe qui gère la logique métier et les données partagées dans l’application.' },
-    { term: 'Service', definition: 'Une classe qui gère la logique métier et les données partagées dans l’application.' },
-    { term: 'Service', definition: 'Une classe qui gère la logique métier et les données partagées dans l’application.' },
-    { term: 'Service', definition: 'Une classe qui gère la logique métier et les données partagées dans l’application.' },
-    { term: 'Service', definition: 'Une classe qui gère la logique métier et les données partagées dans l’application.' },
-    { term: 'Service', definition: 'Une classe qui gère la logique métier et les données partagées dans l’application.' },
-    { term: 'Service', definition: 'Une classe qui gère la logique métier et les données partagées dans l’application.' },
-    { term: 'Service', definition: 'Une classe qui gère la logique métier et les données partagées dans l’application.' }
+    
+    { term: 'MGRN', definition: "MGRN est l'abréviation de MoneyGram Reference Number, qui correspond au numéro de référence de MoneyGram. Il s'agit d'un code unique fourni lors de l'envoi ou de la réception de fonds via MoneyGram, permettant de suivre et de gérer les transactions." },
+    { term: 'MTCN', definition: "(Money Transfer Control Number). Est un numéro de contrôle utilisé pour suivre une transaction d'argent, notamment dans les services de transfert de fonds internationaux comme Western Union." },
+    { term: 'VAS', definition: "Signifie Value-Added Services (Services à Valeur Ajoutée). Ce terme est souvent utilisé dans le domaine des télécommunications et des services numériques pour désigner les services supplémentaires offerts par un opérateur ou une plateforme en plus des services de base." },
+    { term: 'SAG', definition: 'Sous Agent' },
+    { term: 'RZ', definition: 'Responsable Zone' },
+    { term: 'POS', definition: "POS signifie Point of Sale (Point de Vente en français). C'est le lieu où une transaction de vente a lieu, soit physiquement (comme une caisse enregistreuse dans un magasin) ou de manière virtuelle (comme un terminal de paiement en ligne)." },
+    { term: 'FP', definition: 'Flash POS' },
+    { term: 'FCN', definition: 'Flash Coin .' },
+    { term: 'RM', definition: 'Regional Manager' },
+    { term: 'HQ', definition: "Est l'abréviation de Headquarters, qui signifie siège social ou quartier général en français. Il désigne le lieu principal où se trouve la direction ou l'administration centrale d'une organisation, d'une entreprise, d'une institution, ou d'une agence." },
+    { term: 'CFC', definition: 'Compagnie Financiere au Congo.' },
+    { term: 'MG', definition: 'Money Gram' },
+    { term: 'WU', definition: 'Western Union' },
+    { term: 'OPS', definition: "Abréviation de 'Operations', souvent utilisée dans le domaine des technologies de l'information (IT), en particulier dans des termes comme DevOps (Development Operations)." },
+    { term: 'MTN', definition: '' },
+   
+    
   ];
 
 }
