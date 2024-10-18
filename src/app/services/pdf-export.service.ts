@@ -15,7 +15,7 @@ export class PdfExportService {
       const opt = {
         margin:       1,
         filename:     `${fileName}.pdf`, 
-        image:        { type: 'png', quality: 0.98 },
+        image:        { type: 'jpeg', quality: 0.8 },
         html2canvas:  { scale: 2, useCORS: true },
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
       };
@@ -26,20 +26,3 @@ export class PdfExportService {
     }
   }
 }
-
-
-
-
-
- // exportToPDF() { 
-  //   const element = document.getElementById('doc-content'); 
-  //   const opt = {
-  //     margin:       1,
-  //     filename:     'Bulk Notification.pdf',
-  //     image:        { type: 'png', quality: 0.98 },
-  //     html2canvas:  { scale: 2, useCORS: true },
-  //     jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-  //   };
-
-  //   html2pdf().from(element).set(opt).save();
-  // }
