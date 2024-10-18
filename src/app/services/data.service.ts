@@ -1,23 +1,9 @@
-import { CommonModule, NgClass } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-sidebar-docs',
-  standalone: true,
-  imports: [RouterOutlet, NgClass, CommonModule, RouterLink, FormsModule],
-  templateUrl: './sidebar-docs.component.html',
-  styleUrl: './sidebar-docs.component.scss',
+@Injectable({
+  providedIn: 'root',
 })
-
-export class SidebarDocsComponent {
-  activeParent: string | null = null;
-  activeRoute: string = ''; 
-  searchText: string = ''; // Texte de recherche
-  filteredDocs: { name: string, route: string }[] = []; // Stockage des résultats filtrés
-
-  // Tes groupes de documents
+export class DocumentDataService {
   conformite = [
     { name: 'RakkaCash Compliance', route: 'rakka-compliance' },
     { name: 'Mukuru Compliance', route: 'mukuru-compliance' },
@@ -37,7 +23,7 @@ export class SidebarDocsComponent {
     { name: 'Ria Admin', route: 'ria-admin' }, 
   ];
 
-  finance = [ 
+  finance = [
     { name: 'Mukuru Finance', route: 'mukuru-finance' },
     { name: 'RakkaCash Finance', route: 'rakka-finance' },
     { name: 'Sababalar Finance', route: 'saba-finance' },
@@ -63,23 +49,7 @@ export class SidebarDocsComponent {
     { name: 'Western Union', route: 'western-union' },  
   ];
 
-  constructor(private router: Router) {}
-
-  // Fonction de recherche pour filtrer les documents
-  searchDocs() {
-    const allDocs = [...this.conformite, ...this.marketing, ...this.it, ...this.finance, ...this.cscOps];
-    this.filteredDocs = allDocs.filter(doc => doc.name.toLowerCase().includes(this.searchText.toLowerCase()));
+  getAllDocs() {
+    return [...this.conformite, ...this.marketing, ...this.it, ...this.finance, ...this.cscOps];
   }
-
-  // Navigation vers le document sélectionné
-  navigateTo(route: string) {
-    this.activeRoute = route;
-    this.router.navigate(['/docs', route]);
-  }
-
-  // Fonction pour changer la catégorie parent
-  toggleParent(parent: string) {
-    this.activeParent = this.activeParent === parent ? null : parent;
-  }
-  
 }

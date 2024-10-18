@@ -20,10 +20,40 @@
     <div>
       <input type="text" placeholder="🔍 Search..." class="search-input" />
     </div>
-    <div class="btn-container">
-      <button class="search-btn">🔍</button>
+    <!-- <div class="btn-container">
+      <button class="search-btn" (click)="openSearchPopup()">🔍</button>
+    </div> -->
+    <!-- <div class="btn-container">
+      <button class="search-btn" (click)="openPopup()">🔍</button>
     </div>
-     
+    
+    <div *ngIf="showPopup" class="popup-container">
+      <div class="popup">
+        <input type="text" placeholder="Search docs..." />
+        <button (click)="closePopup()">Close</button>
+      </div>
+    </div> -->
+    
+    <!-- Bouton de recherche -->
+<div class="btn-container">
+  <button class="search-btn" (click)="openPopup()">🔍</button>
+</div>
+<!-- Popup de recherche -->
+<div *ngIf="showPopup" class="popup-overlay">
+  <div class="search-popup">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="🔍 Search docs..."
+      [(ngModel)]="searchQuery"
+      (keyup)="onSearch()"
+    />
+    <button class="close-btn" (click)="closePopup()">Esc</button>
+  </div>
+</div> 
+
+
+       
     <!-- <div class="btn-container">
         <img
           src="https://res.cloudinary.com/dxwcrbqes/image/upload/v1721921366/SVG_lyb43q.png"
@@ -35,4 +65,4 @@
 
   <button class="contact-btn">Nous contacter</button>
 </header>
-<!-- <app-hero-section></app-hero-section> -->
+

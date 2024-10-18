@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './pages/home/nav-bar/nav-bar.component';
-import jsPDF from 'jspdf';
-import html2pdf from 'html2pdf.js';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +11,6 @@ import html2pdf from 'html2pdf.js';
 })
 export class AppComponent {
   title = 'DocsUsersApp';
+ 
 }
 

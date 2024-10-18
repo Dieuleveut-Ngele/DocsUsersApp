@@ -1,19 +1,49 @@
 import { CommonModule, NgClass } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { HeroSectionComponent } from '../hero-section/hero-section.component';
+import { Component, ViewChild } from '@angular/core';
+import { RouterLink, RouterLinkActive, Router } from '@angular/router';
+import { SearchPopupComponent } from '../../../search-popup/search-popup.component';
+import { FormsModule, NgModel } from '@angular/forms';
 
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [RouterLink, NgClass, HeroSectionComponent, CommonModule, RouterLinkActive],
+  imports: [
+    RouterLink, 
+    NgClass, 
+    CommonModule, 
+    RouterLinkActive,
+    SearchPopupComponent,
+    FormsModule,
+ ],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
 })
 export class NavBarComponent  {
+  public showPopup = false;
+  public searchQuery = '';
+  searchText: string = ''; // Texte de recherche
+  filteredDocs: { name: string, route: string }[] = []; // Stockage des résultats filtrés
 
+  constructor() {}
+
+  openPopup() {
+    this.showPopup = true;
+  }
+
+  closePopup() {
+    this.showPopup = false;
+  }
+
+  onSearch() {
+    // Logique pour gérer la recherche ici
+    console.log(this.searchQuery);
+  }
+
+ 
 }
+
+
 
 
 

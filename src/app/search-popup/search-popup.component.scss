@@ -1,0 +1,48 @@
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .powered-by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .powered-by img {
+    margin-left: 5px;
+    height: 20px;
+  }
+  
+  .close-btn {
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
