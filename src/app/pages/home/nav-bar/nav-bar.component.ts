@@ -1,7 +1,6 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive, Router } from '@angular/router';
-import { SearchPopupComponent } from '../../../search-popup/search-popup.component';
 import { FormsModule, NgModel } from '@angular/forms';
 
 
@@ -13,7 +12,6 @@ import { FormsModule, NgModel } from '@angular/forms';
     NgClass, 
     CommonModule, 
     RouterLinkActive,
-    SearchPopupComponent,
     FormsModule,
  ],
   templateUrl: './nav-bar.component.html',
@@ -38,10 +36,9 @@ export class NavBarComponent  {
   onSearch() {
     // Logique pour gérer la recherche ici
     console.log(this.searchQuery);
-  }
-
- 
+  } 
 }
+
 
 
 

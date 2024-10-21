@@ -1,12 +1,19 @@
 import { CommonModule, NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-sidebar-docs',
   standalone: true,
-  imports: [RouterOutlet, NgClass, CommonModule, RouterLink, FormsModule],
+  imports: [
+    RouterOutlet, 
+    NgClass, 
+    CommonModule, 
+    RouterLink, 
+    FormsModule, 
+  ],
   templateUrl: './sidebar-docs.component.html',
   styleUrl: './sidebar-docs.component.scss',
 })
@@ -17,7 +24,6 @@ export class SidebarDocsComponent {
   searchText: string = ''; // Texte de recherche
   filteredDocs: { name: string, route: string }[] = []; // Stockage des résultats filtrés
 
-  // Tes groupes de documents
   conformite = [
     { name: 'RakkaCash Compliance', route: 'rakka-compliance' },
     { name: 'Mukuru Compliance', route: 'mukuru-compliance' },
@@ -81,5 +87,6 @@ export class SidebarDocsComponent {
   toggleParent(parent: string) {
     this.activeParent = this.activeParent === parent ? null : parent;
   }
+  
   
 }

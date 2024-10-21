@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { PdfExportService } from '../../../services/pdf-export.service';
 
-
 @Component({
   selector: 'app-bulk-notification',
   standalone: true,

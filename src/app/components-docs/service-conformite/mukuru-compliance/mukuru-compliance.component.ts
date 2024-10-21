@@ -4,7 +4,9 @@ import { PdfExportService } from '../../../services/pdf-export.service';
 @Component({
   selector: 'app-mukuru-compliance',
   standalone: true,
-  imports: [],
+  imports: [
+   
+  ],
   templateUrl: './mukuru-compliance.component.html',
   styleUrl: './mukuru-compliance.component.scss',
 })
