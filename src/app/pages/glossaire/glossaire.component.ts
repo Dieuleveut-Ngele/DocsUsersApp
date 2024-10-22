@@ -21,7 +21,7 @@ export class GlossaireComponent {
     { term: 'FCN', definition: 'Signifie (Flash Coin). C’est l’unité de valeur de FlashApp que vous recevez comme bonus ou commissions instantanément après chaque opération.' },
     { term: 'RM', definition: 'Regional Manager' },
     { term: 'HQ', definition: "Est l'abréviation de Headquarters, qui signifie siège social ou quartier général en français. Il désigne le lieu principal où se trouve la direction ou l'administration centrale d'une organisation, d'une entreprise, d'une institution, ou d'une agence." },
-    
+
     { term: 'CFC', definition: 'Compagnie Financiere au Congo.' },
     { term: 'MG', definition: 'Money Gram' },
     { term: 'WU', definition: 'Western Union' },
@@ -30,15 +30,4 @@ export class GlossaireComponent {
   ];
 }
 
-
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-glossary',
-//   templateUrl: './glossary.component.html',
-//   styleUrls: ['./glossary.component.css']
-// })
-// export class GlossaryComponent {
- 
-// }
 

@@ -5,42 +5,55 @@
       alt="logo"
       class="logo-image"
     />
-
     Flash
   </h1>
   <nav class="nav-links">
-     
     <a class="nav-item" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
     <a class="nav-item" routerLink="/docs" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Docs</a>
     <a class="nav-item" routerLink="/faq" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">FAQ</a>
     <a class="nav-item" routerLink="/glossaire" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Glossaire</a>
   </nav>
 
-  <!-- <div class="search-container">
-    <div>
-      <input type="text" placeholder="🔍 Search..." class="search-input" />
-    </div>
-  </div>  -->
+  <!-- Bouton de recherche -->
+   <div class="search-container">
+    <button class="search-btn" (click)="openPopup()">🔍</button>
   
-    <!-- Bouton de recherche -->
-<div class="btn-container">
-  <button class="search-btn" (click)="openPopup()">🔍</button>
-</div>
-<!-- Popup de recherche -->
-<div *ngIf="showPopup" class="popup-overlay">
-  <div class="search-popup">
-    <input
-      type="text"
-      class="search-input"
-      placeholder="🔍 Search docs..."
-      [(ngModel)]="searchQuery"
-      (keyup)="onSearch()"
-    />
-    <button class="close-btn" (click)="closePopup()">Esc</button>
-  </div>
- </div> 
-
+    <div *ngIf="showPopup" class="popup-overlay">
+      <div class="search-popup">
+        <!-- Input de recherche -->
+        <!-- <img src="search.png" alt="">  -->
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="Recherche..." 
+          [(ngModel)]="searchQuery" 
+          (input)="searchDocs()"
+          autofocus
+        />
+        
+        <!-- Bouton pour fermer le popup -->
+        <button class="close-btn" (click)="closePopup()">
+          <img src="annuler.png" alt="" class="close-btn-img">
+        </button>
+  
+        <!-- Résultats de recherche -->
+        <div class="search-results" *ngIf="searchQuery">
+          <ul *ngIf="filteredDocs.length > 0">
+            <li *ngFor="let doc of filteredDocs" (click)="navigateTo(doc.route)">
+              <span class="result-title">{{ doc.name }}</span>
+              <span class="result-type">Docs</span>
+            </li>
+          </ul>
+          <p *ngIf="filteredDocs.length === 0" class="no-results">
+            Aucun résultat n'a été trouvé.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>  
 
   <button class="contact-btn">Nous contacter</button>
 </header>
+
+
 

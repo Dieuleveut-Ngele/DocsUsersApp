@@ -86,7 +86,5 @@ export class SidebarDocsComponent {
   // Fonction pour changer la catégorie parent
   toggleParent(parent: string) {
     this.activeParent = this.activeParent === parent ? null : parent;
-  }
-  
-  
+  }  
 }

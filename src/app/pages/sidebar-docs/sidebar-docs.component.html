@@ -47,12 +47,12 @@
         <li (click)="toggleParent('IT')" [ngClass]="{ selected: activeParent === 'IT' }">
           <img src="folder.png" alt="">
         Service IT
-      </li>
-      <ul *ngIf="activeParent === 'IT'">
-        <li *ngFor="let guide of it" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
-          {{ guide.name }}
         </li>
-      </ul>
+        <ul *ngIf="activeParent === 'IT'">
+          <li *ngFor="let guide of it" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
+            {{ guide.name }}
+          </li>
+        </ul>
 
         <!-- Dossier Marketing -->
         <li (click)="toggleParent('marketing')" [ngClass]="{ selected: activeParent === 'marketing' }">

@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-popup.component.scss']
 })
 export class SearchPopupComponent {
-  public showPopup = false;
+  showPopup: boolean = false;
 
   constructor() {}
 
