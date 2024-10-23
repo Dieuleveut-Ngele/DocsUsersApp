@@ -22,7 +22,7 @@
       <ul>
         <!-- Dossier Conformité -->
         <li (click)="toggleParent('conformite')" [ngClass]="{ selected: activeParent === 'conformite' }">
-            <img src="folder.png" alt="">
+            <img src="conformite.png" alt="">
             Service Conformité 
         </li>
         <ul *ngIf="activeParent === 'conformite'">
@@ -33,7 +33,7 @@
 
          <!-- Dossier Finance -->
         <li (click)="toggleParent('finance')" [ngClass]="{ selected: activeParent === 'finance' }">
-          <img src="folder.png" alt="">
+          <img src="finance.png" alt="">
         Service Finance
         </li>
         <ul *ngIf="activeParent === 'finance'">
@@ -45,7 +45,7 @@
 
         <!-- Dossier IT -->
         <li (click)="toggleParent('IT')" [ngClass]="{ selected: activeParent === 'IT' }">
-          <img src="folder.png" alt="">
+          <img src="it.png" alt="">
         Service IT
         </li>
         <ul *ngIf="activeParent === 'IT'">
@@ -56,7 +56,7 @@
 
         <!-- Dossier Marketing -->
         <li (click)="toggleParent('marketing')" [ngClass]="{ selected: activeParent === 'marketing' }">
-            <img src="folder.png" alt="">
+            <img src="marketing.png" alt="">
           Service Marketing
         </li>
         <ul *ngIf="activeParent === 'marketing'">
@@ -67,7 +67,7 @@
   
         <!-- Dossier Opérations  -->
         <li (click)="toggleParent('csc-ops')" [ngClass]="{ selected: activeParent === 'csc-ops' }">
-            <img src="folder.png" alt="">
+            <img src="operation.png" alt="">
           Service CSC OPS
         </li>
         <ul *ngIf="activeParent === 'csc-ops'">
