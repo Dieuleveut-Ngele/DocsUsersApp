@@ -43,7 +43,8 @@ body {
   max-width: 120%;
   object-fit: cover;
   display: block;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc9c9;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -51,7 +52,7 @@ body {
 
 .content img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 .title {
@@ -106,6 +107,15 @@ body {
 }
 .second-title {
   margin-top: 25px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #727272;
   padding-bottom: 5px;
 }
+
+  .no-break {
+    page-break-inside: avoid;
+  }
+
+  .force-page-break {
+    page-break-before: always;
+  }
+   
