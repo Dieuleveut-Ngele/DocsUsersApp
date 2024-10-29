@@ -32,6 +32,7 @@ import { HomeComponent } from './pages/home/home/home.component';
 import { GlossaireComponent } from './pages/glossaire/glossaire.component';
 
 export const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'faq', component: FaqComponent},
   { path: 'glossaire', component: GlossaireComponent},
