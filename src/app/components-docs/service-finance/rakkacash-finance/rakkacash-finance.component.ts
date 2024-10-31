@@ -9,7 +9,6 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   styleUrl: './rakkacash-finance.component.scss',
 })
 export class RakkacashFinanceComponent {
-
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
     this.pdfExportService.exportToPDF('doc-content', 'Guide Rakkacash Finance');

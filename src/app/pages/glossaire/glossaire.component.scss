@@ -1,32 +1,31 @@
 .glossary-container {
-    padding: 100px;
-    background-color: hsl(0, 0%, 98%);
-    padding-left: 170px;
-    padding-right: 170px;
-  }
-  
-  h1{
-    margin: 60px;
-    text-align: center;
-    font-size: 2rem;
-    background: linear-gradient(to right, black, rgb(255, 199, 0));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-       font-size: 48px;
-  }
-  
-  .glossary-item {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .glossary-item h3 {
-    color: #ffc700; 
-    font-size: 1.2em;
-  }
-  
-  .glossary-item p {
-    color: #333;
-    font-size: 1em;
-  }
-  
+  padding: 100px;
+  background-color: hsl(0, 0%, 98%);
+  padding-left: 170px;
+  padding-right: 170px;
+}
+
+h1 {
+  margin: 60px;
+  text-align: center;
+  font-size: 2rem;
+  background: linear-gradient(to right, black, rgb(255, 199, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+}
+
+.glossary-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.glossary-item h3 {
+  color: #ffc700;
+  font-size: 1.2em;
+}
+
+.glossary-item p {
+  color: #333;
+  font-size: 1em;
+}

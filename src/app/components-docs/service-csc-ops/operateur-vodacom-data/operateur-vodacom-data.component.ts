@@ -9,9 +9,11 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   styleUrl: './operateur-vodacom-data.component.scss',
 })
 export class OperateurVodacomDataComponent {
-
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
-    this.pdfExportService.exportToPDF('doc-content', 'Guide Operateur Vodacom Data');
+    this.pdfExportService.exportToPDF(
+      'doc-content',
+      'Guide Operateur Vodacom Data',
+    );
   }
 }

@@ -10,7 +10,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     FormArray,
     FormsModule,
-    NgModel
+    NgModel,
   ],
- 
 };

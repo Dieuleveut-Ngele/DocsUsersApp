@@ -88,7 +88,8 @@ body {
   align-items: center;
 }
 
-.download-pdf, .lien {
+.download-pdf,
+.lien {
   text-decoration: none;
 }
 
@@ -115,12 +116,11 @@ body {
   margin-top: 0 !important;
 }
 
-  .no-break {
-    page-break-inside: avoid;
-    margin-bottom: 10px;
-  }
+.no-break {
+  page-break-inside: avoid;
+  margin-bottom: 10px;
+}
 
-  .force-page-break {
-    page-break-before: always;
-  }
-   
+.force-page-break {
+  page-break-before: always;
+}

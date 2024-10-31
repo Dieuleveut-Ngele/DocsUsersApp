@@ -9,7 +9,6 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   styleUrl: './guide-flash-shop.component.scss',
 })
 export class GuideFlashShopComponent {
-
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
     this.pdfExportService.exportToPDF('doc-content', 'Guide Flash Shop');

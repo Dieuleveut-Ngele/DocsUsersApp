@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-search-popup',
   standalone: true,
-  imports: [CommonModule],  // Ajoute cette ligne pour rendre le composant standalone
+  imports: [CommonModule], // Ajoute cette ligne pour rendre le composant standalone
   templateUrl: './search-popup.component.html',
-  styleUrls: ['./search-popup.component.scss']
+  styleUrls: ['./search-popup.component.scss'],
 })
 export class SearchPopupComponent {
   showPopup: boolean = false;
@@ -21,7 +21,6 @@ export class SearchPopupComponent {
     this.showPopup = false;
   }
 }
-
 
 // import { Component } from '@angular/core';
 
@@ -41,4 +40,3 @@ export class SearchPopupComponent {
 //     this.showPopup = false;
 //   }
 // }
-

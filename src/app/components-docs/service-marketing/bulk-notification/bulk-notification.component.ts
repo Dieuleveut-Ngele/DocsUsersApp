@@ -8,23 +8,9 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   templateUrl: './bulk-notification.component.html',
   styleUrl: './bulk-notification.component.scss',
 })
-
 export class BulkNotificationComponent {
-
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
     this.pdfExportService.exportToPDF('doc-content', 'Guide Bulk Notification');
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-

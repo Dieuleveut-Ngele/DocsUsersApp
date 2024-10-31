@@ -9,10 +9,8 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   styleUrl: './guide-flash-cash-lite.component.scss',
 })
 export class GuideFlashCashLiteComponent {
-
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
     this.pdfExportService.exportToPDF('doc-content', 'Guide Flash Cash Lite');
   }
-
 }

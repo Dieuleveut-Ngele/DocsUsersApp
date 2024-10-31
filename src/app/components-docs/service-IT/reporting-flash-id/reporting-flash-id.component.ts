@@ -9,7 +9,6 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   styleUrl: './reporting-flash-id.component.scss',
 })
 export class ReportingFlashIdComponent {
-
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
     this.pdfExportService.exportToPDF('doc-content', 'Guide Reporting FlashId');

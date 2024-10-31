@@ -9,7 +9,6 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   styleUrl: './guide-gestion-stock.component.scss',
 })
 export class GuideGestionStockComponent {
-
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
     this.pdfExportService.exportToPDF('doc-content', 'Guide Gestion Stock');

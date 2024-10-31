@@ -9,9 +9,11 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   styleUrl: './operateur-africell-data.component.scss',
 })
 export class OperateurAfricellDataComponent {
-
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
-    this.pdfExportService.exportToPDF('doc-content', 'Guide Operateur Africell Data');
+    this.pdfExportService.exportToPDF(
+      'doc-content',
+      'Guide Operateur Africell Data',
+    );
   }
 }

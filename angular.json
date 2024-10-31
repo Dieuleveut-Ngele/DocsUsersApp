@@ -44,7 +44,7 @@
               "raf",
               "rgbcolor",
               "html2pdf.js"
-             ],
+            ],
             "outputPath": "dist/docs-users-app",
             "index": "src/index.html",
             "browser": "src/main.ts",

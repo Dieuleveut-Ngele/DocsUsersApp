@@ -9,9 +9,11 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   styleUrl: './rakkacash-compliance.component.scss',
 })
 export class RakkacashComplianceComponent {
-
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
-    this.pdfExportService.exportToPDF('doc-content', 'Guide Rakkacash Compliance');
+    this.pdfExportService.exportToPDF(
+      'doc-content',
+      'Guide Rakkacash Compliance',
+    );
   }
 }

@@ -9,9 +9,11 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   styleUrl: './operateur-cashin-cashout.component.scss',
 })
 export class OperateurCashinCashoutComponent {
-
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
-    this.pdfExportService.exportToPDF('doc-content', 'Guide Operateur Cashin et Cashout');
+    this.pdfExportService.exportToPDF(
+      'doc-content',
+      'Guide Operateur Cashin et Cashout',
+    );
   }
 }

@@ -2,35 +2,37 @@ import { Injectable } from '@angular/core';
 import html2pdf from 'html2pdf.js';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PdfExportService {
-
   constructor() {}
 
-exportToPDF(elementId: string, fileName: string) {
-  const element = document.getElementById(elementId);
+  exportToPDF(elementId: string, fileName: string) {
+    const element = document.getElementById(elementId);
 
-  if (element) {
+    if (element) {
+      element.classList.add('pdf-no-margin');
 
-    element.classList.add('pdf-no-margin');
+      const opt = {
+        margin: 0.3,
+        filename: `${fileName}.pdf`,
+        image: { type: 'jpeg', quality: 0.8 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+      };
 
-    const opt = {
-      margin: 0.3,
-      filename: `${fileName}.pdf`,
-      image: { type: 'jpeg', quality: 0.8 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
-
-    html2pdf().from(element).set(opt).save().then(() => {
-      element.classList.remove('pdf-no-margin');
-    });
-  } else {
-    console.error(`L'élément avec l'ID "${elementId}" n'a pas été trouvé.`);
+      html2pdf()
+        .from(element)
+        .set(opt)
+        .save()
+        .then(() => {
+          element.classList.remove('pdf-no-margin');
+        });
+    } else {
+      console.error(`L'élément avec l'ID "${elementId}" n'a pas été trouvé.`);
+    }
   }
- }
-} 
+}
 
 // import { Injectable } from '@angular/core';
 // import html2pdf from 'html2pdf.js';
@@ -48,7 +50,7 @@ exportToPDF(elementId: string, fileName: string) {
 //     if (element) {
 //       // Applique la classe pour retirer la marge en haut
 //       element.classList.add('pdf-no-margin');
-      
+
 //       // Sélectionne toutes les images dans l'élément et applique la bordure temporairement
 //       const images = element.querySelectorAll('img');
 //       images.forEach((img) => img.classList.add('pdf-image-border'));
@@ -71,6 +73,3 @@ exportToPDF(elementId: string, fileName: string) {
 //     }
 //   }
 // }
-
-
-

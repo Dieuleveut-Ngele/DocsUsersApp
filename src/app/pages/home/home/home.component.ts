@@ -6,13 +6,8 @@ import { SearchPopupComponent } from '../../../search-popup/search-popup.compone
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    NavBarComponent,
-    HeroSectionComponent,
-  ],
+  imports: [NavBarComponent, HeroSectionComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}

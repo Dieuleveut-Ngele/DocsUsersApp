@@ -6,22 +6,16 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [
-    RouterLink, 
-    NgClass, 
-    CommonModule, 
-    RouterLinkActive,
-    FormsModule,
-  ],
+  imports: [RouterLink, NgClass, CommonModule, RouterLinkActive, FormsModule],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
 })
 export class NavBarComponent {
   activeParent: string | null = null;
-  activeRoute: string = ''; 
+  activeRoute: string = '';
   public showPopup = false;
   public searchQuery = ''; // Utilisation de searchQuery dans l'input et la recherche
-  filteredDocs: { name: string, route: string }[] = [];
+  filteredDocs: { name: string; route: string }[] = [];
 
   // Documents
   conformite = [
@@ -33,22 +27,22 @@ export class NavBarComponent {
 
   marketing = [
     { name: 'Flash Contact', route: 'flash-contact' },
-    { name: 'Bulk Notification', route: 'bulk-notification' }, 
+    { name: 'Bulk Notification', route: 'bulk-notification' },
   ];
 
   it = [
     { name: 'Reporting Flash Id', route: 'reporting-flashid' },
     { name: 'RakkaCash Admin', route: 'rakka-admin' },
     { name: 'Sababalar Admin', route: 'saba-admin' },
-    { name: 'Ria Admin', route: 'ria-admin' }, 
+    { name: 'Ria Admin', route: 'ria-admin' },
   ];
 
-  finance = [ 
+  finance = [
     { name: 'Mukuru Finance', route: 'mukuru-finance' },
     { name: 'RakkaCash Finance', route: 'rakka-finance' },
     { name: 'Sababalar Finance', route: 'saba-finance' },
     { name: 'Ria Finance', route: 'ria-finance' },
-    { name: 'Parametrage Compta', route: 'parametrage-compta' }
+    { name: 'Parametrage Compta', route: 'parametrage-compta' },
   ];
 
   cscOps = [
@@ -66,22 +60,30 @@ export class NavBarComponent {
     { name: 'Guide Operateur Vodacom Data', route: 'operateur-vodacom-data' },
     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
     { name: 'MoneyGram', route: 'money-gram' },
-    { name: 'Western Union', route: 'western-union' },  
+    { name: 'Western Union', route: 'western-union' },
   ];
 
   constructor(private router: Router) {}
 
   // Méthode de recherche
   searchDocs() {
-    const allDocs = [...this.conformite, ...this.marketing, ...this.it, ...this.finance, ...this.cscOps];
-    this.filteredDocs = allDocs.filter(doc => doc.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
+    const allDocs = [
+      ...this.conformite,
+      ...this.marketing,
+      ...this.it,
+      ...this.finance,
+      ...this.cscOps,
+    ];
+    this.filteredDocs = allDocs.filter((doc) =>
+      doc.name.toLowerCase().includes(this.searchQuery.toLowerCase()),
+    );
   }
 
   // Navigation vers le document sélectionné
   navigateTo(route: string) {
     this.activeRoute = route;
-    this.router.navigate(['/docs', route]);  
-    this.closePopup(); 
+    this.router.navigate(['/docs', route]);
+    this.closePopup();
   }
 
   openPopup() {
@@ -91,6 +93,4 @@ export class NavBarComponent {
   closePopup() {
     this.showPopup = false;
   }
-
 }
-

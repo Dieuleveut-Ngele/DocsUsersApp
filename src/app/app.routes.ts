@@ -34,8 +34,8 @@ import { GlossaireComponent } from './pages/glossaire/glossaire.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'faq', component: FaqComponent},
-  { path: 'glossaire', component: GlossaireComponent},
+  { path: 'faq', component: FaqComponent },
+  { path: 'glossaire', component: GlossaireComponent },
   {
     path: 'docs',
     component: SidebarDocsComponent,
@@ -65,17 +65,15 @@ export const routes: Routes = [
       { path: 'rakka-finance', component: RakkacashFinanceComponent },
       { path: 'rakka-operateur', component: RakkacashOperateurComponent },
       { path: 'reporting-flashid', component: ReportingFlashIdComponent },
-      { path: 'ria-admin', component: RiaAdminComponent},
-      { path: 'ria-compliance', component: RiaComplianceComponent},
-      { path: 'ria-finance', component: RiaFinanceComponent},
-      { path: 'ria-operateur', component: RiaOperateurComponent},
+      { path: 'ria-admin', component: RiaAdminComponent },
+      { path: 'ria-compliance', component: RiaComplianceComponent },
+      { path: 'ria-finance', component: RiaFinanceComponent },
+      { path: 'ria-operateur', component: RiaOperateurComponent },
 
-      { path: 'saba-admin', component: SababalarAdminComponent},
-      { path: 'saba-compliance', component: SababalarComplianceComponent},
-      { path: 'saba-finance', component: SababalarFinanceComponent},
-      { path: 'western-union', component: WesternUnionComponent},
-
-
+      { path: 'saba-admin', component: SababalarAdminComponent },
+      { path: 'saba-compliance', component: SababalarComplianceComponent },
+      { path: 'saba-finance', component: SababalarFinanceComponent },
+      { path: 'western-union', component: WesternUnionComponent },
     ],
   },
 ];

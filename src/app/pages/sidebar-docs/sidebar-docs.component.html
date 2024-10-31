@@ -1,93 +1,122 @@
-
 <div class="main-container">
- 
-    <div class="sidebar">
-      <div class="search-container">
-        <input 
-          type="text" 
-          [(ngModel)]="searchText" 
-          (input)="searchDocs()" 
-          placeholder="🔍 Rechercher documents..."
-          class="search-input" />
-      
-        <div *ngIf="searchText && filteredDocs.length > 0">
-          <ul>
-            <li *ngFor="let doc of filteredDocs" (click)="navigateTo(doc.route)">
-              {{ doc.name }}
-            </li>
-          </ul>
-        </div>
+  <div class="sidebar">
+    <div class="search-container">
+      <input
+        type="text"
+        [(ngModel)]="searchText"
+        (input)="searchDocs()"
+        placeholder="🔍 Rechercher documents..."
+        class="search-input"
+      />
+
+      <div *ngIf="searchText && filteredDocs.length > 0">
+        <ul>
+          <li *ngFor="let doc of filteredDocs" (click)="navigateTo(doc.route)">
+            {{ doc.name }}
+          </li>
+        </ul>
       </div>
-    
-      <ul>
-        <!-- Dossier Conformité -->
-        <li (click)="toggleParent('conformite')" [ngClass]="{ selected: activeParent === 'conformite' }">
-            <img src="conformite.png" alt="">
-            Service Conformité 
-        </li>
-        <ul *ngIf="activeParent === 'conformite'">
-          <li *ngFor="let guide of conformite" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
-            {{ guide.name }}
-          </li>
-        </ul>
-
-         <!-- Dossier Finance -->
-        <li (click)="toggleParent('finance')" [ngClass]="{ selected: activeParent === 'finance' }">
-          <img src="finance.png" alt="">
-        Service Finance
-        </li>
-        <ul *ngIf="activeParent === 'finance'">
-          <li *ngFor="let guide of finance" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
-            {{ guide.name }}
-          </li>
-        </ul>
-    
-
-        <!-- Dossier IT -->
-        <li (click)="toggleParent('IT')" [ngClass]="{ selected: activeParent === 'IT' }">
-          <img src="it.png" alt="">
-        Service IT
-        </li>
-        <ul *ngIf="activeParent === 'IT'">
-          <li *ngFor="let guide of it" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
-            {{ guide.name }}
-          </li>
-        </ul>
-
-        <!-- Dossier Marketing -->
-        <li (click)="toggleParent('marketing')" [ngClass]="{ selected: activeParent === 'marketing' }">
-            <img src="marketing.png" alt="">
-          Service Marketing
-        </li>
-        <ul *ngIf="activeParent === 'marketing'">
-          <li *ngFor="let guide of marketing" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
-            {{ guide.name }}
-          </li>
-        </ul>
-  
-        <!-- Dossier Opérations  -->
-        <li (click)="toggleParent('csc-ops')" [ngClass]="{ selected: activeParent === 'csc-ops' }">
-            <img src="operation.png" alt="">
-          Service CSC OPS
-        </li>
-        <ul *ngIf="activeParent === 'csc-ops'">
-          <li *ngFor="let guide of cscOps" (click)="navigateTo(guide.route)" [ngClass]="{ selected: activeRoute === guide.route }">
-            {{ guide.name }}
-          </li>
-        </ul>
-      </ul>
     </div>
-  
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>  
+
+    <ul>
+      <!-- Dossier Conformité -->
+      <li
+        (click)="toggleParent('conformite')"
+        [ngClass]="{ selected: activeParent === 'conformite' }"
+      >
+        <img src="conformite.png" alt="" />
+        Service Conformité
+      </li>
+      <ul *ngIf="activeParent === 'conformite'">
+        <li
+          *ngFor="let guide of conformite"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
+        >
+          {{ guide.name }}
+        </li>
+      </ul>
+
+      <!-- Dossier Finance -->
+      <li
+        (click)="toggleParent('finance')"
+        [ngClass]="{ selected: activeParent === 'finance' }"
+      >
+        <img src="finance.png" alt="" />
+        Service Finance
+      </li>
+      <ul *ngIf="activeParent === 'finance'">
+        <li
+          *ngFor="let guide of finance"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
+        >
+          {{ guide.name }}
+        </li>
+      </ul>
+
+      <!-- Dossier IT -->
+      <li
+        (click)="toggleParent('IT')"
+        [ngClass]="{ selected: activeParent === 'IT' }"
+      >
+        <img src="it.png" alt="" />
+        Service IT
+      </li>
+      <ul *ngIf="activeParent === 'IT'">
+        <li
+          *ngFor="let guide of it"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
+        >
+          {{ guide.name }}
+        </li>
+      </ul>
+
+      <!-- Dossier Marketing -->
+      <li
+        (click)="toggleParent('marketing')"
+        [ngClass]="{ selected: activeParent === 'marketing' }"
+      >
+        <img src="marketing.png" alt="" />
+        Service Marketing
+      </li>
+      <ul *ngIf="activeParent === 'marketing'">
+        <li
+          *ngFor="let guide of marketing"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
+        >
+          {{ guide.name }}
+        </li>
+      </ul>
+
+      <!-- Dossier Opérations  -->
+      <li
+        (click)="toggleParent('csc-ops')"
+        [ngClass]="{ selected: activeParent === 'csc-ops' }"
+      >
+        <img src="operation.png" alt="" />
+        Service CSC OPS
+      </li>
+      <ul *ngIf="activeParent === 'csc-ops'">
+        <li
+          *ngFor="let guide of cscOps"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
+        >
+          {{ guide.name }}
+        </li>
+      </ul>
+    </ul>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 
-
-
-
-
-  <!-- <div *ngIf="filterDocs(conformite).length > 0">
+<!-- <div *ngIf="filterDocs(conformite).length > 0">
     <h3>Conformité</h3>
     <ul>
       <li *ngFor="let item of filterDocs(conformite)">
@@ -104,11 +133,3 @@
       </li>
     </ul>
   </div> -->
-  
- 
-  
-  
-
-
-
-

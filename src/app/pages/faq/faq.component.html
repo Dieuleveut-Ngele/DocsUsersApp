@@ -1,18 +1,15 @@
 <div class="faq-container">
   <h2>Questions fréquemment posées</h2>
-    <div *ngFor="let item of faqItems" class="faq-item">
-      <div class="faq-question" (click)="toggleAnswer(item)">
-        <p>{{ item.question }}</p>
-        <span class="toggle-icon">
-          {{ item.open ? '▲' : '▼' }}
-        </span>
-      </div>
-      <div class="faq-answer" *ngIf="item.open">
-        <p>{{ item.answer }}</p>
-        <p>{{ item.paragraph }}</p>
-      </div>
+  <div *ngFor="let item of faqItems" class="faq-item">
+    <div class="faq-question" (click)="toggleAnswer(item)">
+      <p>{{ item.question }}</p>
+      <span class="toggle-icon">
+        {{ item.open ? "▲" : "▼" }}
+      </span>
     </div>
+    <div class="faq-answer" *ngIf="item.open">
+      <p>{{ item.answer }}</p>
+      <p>{{ item.paragraph }}</p>
+    </div>
+  </div>
 </div>
-
-
-  

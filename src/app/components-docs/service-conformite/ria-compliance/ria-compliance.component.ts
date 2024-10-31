@@ -6,10 +6,9 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   standalone: true,
   imports: [],
   templateUrl: './ria-compliance.component.html',
-  styleUrl: './ria-compliance.component.scss'
+  styleUrl: './ria-compliance.component.scss',
 })
 export class RiaComplianceComponent {
-
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
     this.pdfExportService.exportToPDF('doc-content', 'Guide Ria Compliance');
