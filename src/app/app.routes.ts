@@ -48,7 +48,7 @@ export const routes: Routes = [
       { path: 'flash-marchand', component: GuideFlashMarchandComponent },
       { path: 'gestion-stock', component: GuideGestionStockComponent },
       { path: 'operateur-cash', component: OperateurCashinCashoutComponent },
-      { path: 'money-gram', component: MoneyGramComponent },
+      { path: 'moneygram', component: MoneyGramComponent },
       { path: 'mukuru-compliance', component: MukuruComplianceComponent },
       { path: 'mukuru-finance', component: MukuruFinanceComponent },
       { path: 'mukuru-operateur', component: MukuruOperateurComponent },

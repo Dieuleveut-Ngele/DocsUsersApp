@@ -13,8 +13,8 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 export class SidebarDocsComponent {
   activeParent: string | null = null;
   activeRoute: string = '';
-  searchText: string = ''; // Texte de recherche
-  filteredDocs: { name: string; route: string }[] = []; // Stockage des résultats filtrés
+  searchText: string = ''; 
+  filteredDocs: { name: string; route: string }[] = []; 
 
   conformite = [
     { name: 'RakkaCash Compliance', route: 'rakka-compliance' },
@@ -48,6 +48,7 @@ export class SidebarDocsComponent {
     { name: 'Guide Flash Marchand', route: 'flash-marchand' },
     { name: 'Guide FlashBank', route: 'flash-bank' },
     { name: 'Guide Gestion Stock', route: 'gestion-stock' },
+    { name: 'MoneyGram', route: 'moneygram'},
     { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
     { name: 'RakkaCash Operateur', route: 'rakka-operateur' },
     { name: 'Ria Operateur', route: 'ria-operateur' },
@@ -57,8 +58,9 @@ export class SidebarDocsComponent {
     { name: 'Guide Operateur VAS', route: 'operateur-vas' },
     { name: 'Guide Operateur Vodacom Data', route: 'operateur-vodacom-data' },
     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
-    { name: 'MoneyGram', route: 'money-gram' },
     { name: 'Western Union', route: 'western-union' },
+    { name: 'Western Union', route: 'western-union' }, 
+    { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
   ];
 
   constructor(private router: Router) {}
@@ -88,3 +90,7 @@ export class SidebarDocsComponent {
     this.activeParent = this.activeParent === parent ? null : parent;
   }
 }
+
+
+
+

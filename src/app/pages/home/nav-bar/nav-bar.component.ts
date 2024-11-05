@@ -59,7 +59,7 @@ export class NavBarComponent {
     { name: 'Guide Operateur VAS', route: 'operateur-vas' },
     { name: 'Guide Operateur Vodacom Data', route: 'operateur-vodacom-data' },
     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
-    { name: 'MoneyGram', route: 'money-gram' },
+    { name: 'MoneyGram', route: 'moneygram' },
     { name: 'Western Union', route: 'western-union' },
   ];
 
