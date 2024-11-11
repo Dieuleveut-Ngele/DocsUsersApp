@@ -14,7 +14,7 @@ export class NavBarComponent {
   activeParent: string | null = null;
   activeRoute: string = '';
   public showPopup = false;
-  public searchQuery = ''; // Utilisation de searchQuery dans l'input et la recherche
+  public searchQuery = ''; 
   filteredDocs: { name: string; route: string }[] = [];
 
   // Documents
