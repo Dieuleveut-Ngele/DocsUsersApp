@@ -23,7 +23,7 @@ export class GlossaireComponent {
     {
       term: 'POS',
       definition:
-        "POS signifie Point of Sale (Point de Vente en français). C'est le lieu où une transaction de vente a lieu, soit physiquement (comme une caisse enregistreuse dans un magasin) ou de manière virtuelle (comme un terminal de paiement en ligne).",
+        "POS signifie Point of Sale (Point de Vente en français). C'est le lieu où une transaction a lieu, soit physiquement (comme une caisse enregistreuse dans un magasin) ou de manière virtuelle (comme un terminal de paiement en ligne).",
     },
     { term: 'FP', definition: 'Flash POS' },
     {
@@ -43,12 +43,13 @@ export class GlossaireComponent {
     {
       term: 'HQ',
       definition:
-        "Est l'abréviation de Headquarters, qui signifie siège social ou quartier général en français. Il désigne le lieu principal où se trouve la direction ou l'administration centrale d'une organisation, d'une entreprise, d'une institution, ou d'une agence.",
+        "Est l'abréviation de Headquarters, qui signifie siège social ou quartier général en français. Il désigne le lieu principal où se trouve la direction ou l'administration centrale de Flash.",
     },
 
     { term: 'CFC', definition: 'Compagnie Financiere au Congo.' },
     { term: 'MG', definition: 'Money Gram' },
     { term: 'WU', definition: 'Western Union' },
+    
     {
       term: 'OPS',
       definition:

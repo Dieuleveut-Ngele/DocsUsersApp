@@ -17,22 +17,16 @@
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+  
 }
 
 body {
+  
   margin: 0;
   padding: 0;
-}
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Arial, sans-serif";
   overflow-x: hidden;
-  background-color: #f4f4f4;
+      
 }
 
 .content img {
@@ -43,7 +37,6 @@ body {
   max-width: 120%;
   object-fit: cover;
   display: block;
-  // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border: 1px solid #ccc9c9;
   transition:
     transform 0.3s ease,

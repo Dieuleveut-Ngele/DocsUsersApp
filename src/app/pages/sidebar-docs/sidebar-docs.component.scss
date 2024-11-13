@@ -47,7 +47,9 @@
 }
 
 .sidebar ul li.selected {
-  background-color: #d0d0d041;
+  background: linear-gradient(to right, black, rgb(255, 199, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   font-weight: bold;
   border-radius: 2px;
 }
@@ -79,17 +81,17 @@ ul {
 li {
   cursor: pointer;
   padding: 5px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .content {
   padding: 100px;
-  padding-bottom: 100%;
   padding-left: 410px;
   padding-right: 150px;
   background-color: #ffffff;
   font-family: "Arial, sans-serif";
   overflow: hidden;
   text-align: justify;
+
 }
 

@@ -29,10 +29,10 @@ import { SababalarFinanceComponent } from './components-docs/service-finance/sab
 import { WesternUnionComponent } from './components-docs/service-csc-ops/western-union/western-union.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { HomeComponent } from './pages/home/home/home.component';
-import { GlossaireComponent } from './pages/glossaire/glossaire.component';
+import { GlossaireComponent } from './pages/glossaire/glossaire.component';  
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'glossaire', component: GlossaireComponent },
@@ -77,3 +77,4 @@ export const routes: Routes = [
     ],
   },
 ];
+
