@@ -1,0 +1,19 @@
+.fixed {  
+    position: fixed;  
+    bottom: 20px;  
+    right: 20px;   
+  }  
+  
+  button {  
+    width: 33px;  
+    height: 33px;  
+    border-radius: 50%;  
+    border-color:#ffea2f;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+  }  
+  
+  button:hover {  
+    background-color: #ffea2f;  
+  }
