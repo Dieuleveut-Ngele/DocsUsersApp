@@ -30,6 +30,7 @@ import { WesternUnionComponent } from './components-docs/service-csc-ops/western
 import { FaqComponent } from './pages/faq/faq.component';
 import { HomeComponent } from './pages/home/home/home.component';
 import { GlossaireComponent } from './pages/glossaire/glossaire.component';  
+import { TelcoComponent } from './components-docs/service-csc-ops/telco/telco.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -60,6 +61,7 @@ export const routes: Routes = [
         path: 'operateur-vodacom-data',
         component: OperateurVodacomDataComponent,
       },
+      { path: 'telco', component: TelcoComponent},
       { path: 'rakka-admin', component: RakkacashAdminComponent },
       { path: 'rakka-compliance', component: RakkacashComplianceComponent },
       { path: 'rakka-finance', component: RakkacashFinanceComponent },

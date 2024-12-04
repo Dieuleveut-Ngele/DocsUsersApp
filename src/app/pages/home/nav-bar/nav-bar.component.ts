@@ -55,7 +55,7 @@ export class NavBarComponent {
     { name: 'Ria Operateur', route: 'ria-operateur' },
     { name: 'Operateur Cash In & Cash Out', route: 'operateur-cash' },
     { name: 'Guide Operateur Africell Data', route: 'operateur-africell-data' },
-    { name: 'Guide Operateur Telco', route: 'operateur-telco' },
+    { name: 'Guide Operateur Telco', route: 'telco' },
     { name: 'Guide Operateur VAS', route: 'operateur-vas' },
     { name: 'Guide Operateur Vodacom Data', route: 'operateur-vodacom-data' },
     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
