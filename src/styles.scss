@@ -23,10 +23,14 @@
 html, body {
   margin: 0;
   padding: 0;
-  // height: 100vh;
+  
   box-sizing: border-box;
   min-height: 100vh;
   overflow-x: hidden; 
+}
+
+html {
+  height: 100vh;
 }
 
 .content img {

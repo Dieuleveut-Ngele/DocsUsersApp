@@ -17,8 +17,43 @@
         </ul>
       </div>
     </div>
-
     <ul>
+      <!-- Dossier Opérations  -->
+      <li
+        (click)="toggleParent('csc-ops')"
+        [ngClass]="{ selected: activeParent === 'csc-ops' }"
+      >
+        <img src="operation.png" alt="" />
+        Service CSC OPS
+      </li>
+      <ul *ngIf="activeParent === 'csc-ops'">
+        <li
+          *ngFor="let guide of cscOps"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
+        >
+          {{ guide.name }}
+        </li>
+      </ul>
+
+        <!-- Dossier Finance -->
+        <li
+        (click)="toggleParent('finance')"
+        [ngClass]="{ selected: activeParent === 'finance' }"
+      >
+        <img src="finance.png" alt="" />
+        Service Finance
+      </li>
+      <ul *ngIf="activeParent === 'finance'">
+        <li
+          *ngFor="let guide of finance"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
+        >
+          {{ guide.name }}
+        </li>
+      </ul>
+
       <!-- Dossier Conformité -->
       <li
         (click)="toggleParent('conformite')"
@@ -36,43 +71,6 @@
           {{ guide.name }}
         </li>
       </ul>
-
-      <!-- Dossier Finance -->
-      <li
-        (click)="toggleParent('finance')"
-        [ngClass]="{ selected: activeParent === 'finance' }"
-      >
-        <img src="finance.png" alt="" />
-        Service Finance
-      </li>
-      <ul *ngIf="activeParent === 'finance'">
-        <li
-          *ngFor="let guide of finance"
-          (click)="navigateTo(guide.route)"
-          [ngClass]="{ selected: activeRoute === guide.route }"
-        >
-          {{ guide.name }}
-        </li>
-      </ul>
-
-      <!-- Dossier IT -->
-      <li
-        (click)="toggleParent('IT')"
-        [ngClass]="{ selected: activeParent === 'IT' }"
-      >
-        <img src="it.png" alt="" />
-        Service IT
-      </li>
-      <ul *ngIf="activeParent === 'IT'">
-        <li
-          *ngFor="let guide of it"
-          (click)="navigateTo(guide.route)"
-          [ngClass]="{ selected: activeRoute === guide.route }"
-        >
-          {{ guide.name }}
-        </li>
-      </ul>
-      
 
       <!-- Dossier Marketing -->
       <li
@@ -92,17 +90,17 @@
         </li>
       </ul>
 
-      <!-- Dossier Opérations  -->
+      <!-- Dossier IT -->
       <li
-        (click)="toggleParent('csc-ops')"
-        [ngClass]="{ selected: activeParent === 'csc-ops' }"
+        (click)="toggleParent('IT')"
+        [ngClass]="{ selected: activeParent === 'IT' }"
       >
-        <img src="operation.png" alt="" />
-        Service CSC OPS
+        <img src="it.png" alt="" />
+        Service IT
       </li>
-      <ul *ngIf="activeParent === 'csc-ops'">
+      <ul *ngIf="activeParent === 'IT'">
         <li
-          *ngFor="let guide of cscOps"
+          *ngFor="let guide of it"
           (click)="navigateTo(guide.route)"
           [ngClass]="{ selected: activeRoute === guide.route }"
         >
