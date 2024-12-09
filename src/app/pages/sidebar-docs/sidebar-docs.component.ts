@@ -44,22 +44,27 @@ export class SidebarDocsComponent {
   ];
 
   cscOps = [
-    { name: 'Guide Flash Cash Lite', route: 'flash-cash-lite' },
-    { name: 'Guide Flash Marchand', route: 'flash-marchand' },
-    { name: 'Guide FlashBank', route: 'flash-bank' },
-    { name: 'Guide Gestion Stock', route: 'gestion-stock' },
     { name: 'MoneyGram', route: 'moneygram'},
+    { name: 'Western Union', route: 'western-union' },
+    { name: 'Ria Operateur', route: 'ria-operateur' },
     { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
     { name: 'RakkaCash Operateur', route: 'rakka-operateur' },
-    { name: 'Ria Operateur', route: 'ria-operateur' },
+
+    { name: 'Flash Transafer Lite', route: 'flash-cash-lite' },
+    { name: 'Guide FlashBank', route: 'flash-bank' },
+    { name: 'Guide Flash Marchand', route: 'flash-marchand' },
+    { name: 'Guide Gestion Stock', route: 'gestion-stock' },
+    
     { name: 'Operateur Cash In & Cash Out', route: 'operateur-cash' },
-    { name: 'Guide Operateur Africell Data', route: 'operateur-africell-data' },
     { name: 'Guide Operateur Telco', route: 'telco' },
+    { name: 'Mobile Money', route: 'mobile-money'},
+    { name: 'Operateur Africell Data', route: 'operateur-africell-data' },
+    { name: 'Operateur Vodacom Data', route: 'operateur-vodacom-data' },
+    
     { name: 'Guide Operateur VAS', route: 'operateur-vas' },
-    { name: 'Guide Operateur Vodacom Data', route: 'operateur-vodacom-data' },
+    
     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
     { name: 'Western Union', route: 'western-union' },
-    { name: 'Western Union', route: 'western-union' }, 
     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
   ];
 

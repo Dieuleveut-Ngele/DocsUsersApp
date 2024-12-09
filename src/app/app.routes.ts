@@ -31,6 +31,7 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { HomeComponent } from './pages/home/home/home.component';
 import { GlossaireComponent } from './pages/glossaire/glossaire.component';  
 import { TelcoComponent } from './components-docs/service-csc-ops/telco/telco.component';
+import { MobileMoneyComponent } from './components-docs/service-csc-ops/mobile-money/mobile-money.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -62,6 +63,7 @@ export const routes: Routes = [
         component: OperateurVodacomDataComponent,
       },
       { path: 'telco', component: TelcoComponent},
+      { path: 'mobile-money', component: MobileMoneyComponent},
       { path: 'rakka-admin', component: RakkacashAdminComponent },
       { path: 'rakka-compliance', component: RakkacashComplianceComponent },
       { path: 'rakka-finance', component: RakkacashFinanceComponent },
