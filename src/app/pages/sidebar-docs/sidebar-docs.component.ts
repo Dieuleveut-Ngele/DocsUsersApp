@@ -62,9 +62,6 @@ export class SidebarDocsComponent {
     { name: 'Operateur Vodacom Data', route: 'operateur-vodacom-data' },
     
     { name: 'Guide Operateur VAS', route: 'operateur-vas' },
-    
-    { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
-    { name: 'Western Union', route: 'western-union' },
     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
   ];
 
