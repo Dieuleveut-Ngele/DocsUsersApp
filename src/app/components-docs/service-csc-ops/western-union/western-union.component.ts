@@ -11,6 +11,6 @@ import { PdfExportService } from '../../../services/pdf-export.service';
 export class WesternUnionComponent {
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
-    this.pdfExportService.exportToPDF('doc-content', 'Guide Western Union ');
+    this.pdfExportService.exportToPDF('doc-content', 'Guide Western Union');
   }
 }
