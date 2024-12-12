@@ -33,6 +33,7 @@ import { GlossaireComponent } from './pages/glossaire/glossaire.component';
 import { TelcoComponent } from './components-docs/service-csc-ops/telco/telco.component';
 import { MobileMoneyComponent } from './components-docs/service-csc-ops/mobile-money/mobile-money.component';
 import { CanalPlusEtEasyTvComponent } from './components-docs/service-csc-ops/canal-plus-et-easy-tv/canal-plus-et-easy-tv.component';
+import { BleusatComponent } from './components-docs/service-csc-ops/bleusat/bleusat.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -48,6 +49,7 @@ export const routes: Routes = [
       { path: 'bulk-notification', component: BulkNotificationComponent },
       { path: 'flash-bank', component: GuideFlashBankComponent },
       { path: 'canalpluseasytv', component: CanalPlusEtEasyTvComponent},
+      { path: 'bleusat', component: BleusatComponent},
       { path: 'flash-cash-lite', component: GuideFlashCashLiteComponent },
       { path: 'flash-marchand', component: GuideFlashMarchandComponent },
       { path: 'gestion-stock', component: GuideGestionStockComponent },

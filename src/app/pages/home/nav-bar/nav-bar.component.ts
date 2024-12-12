@@ -50,6 +50,7 @@ export class NavBarComponent {
     { name: 'Guide Flash Marchand', route: 'flash-marchand' },
     { name: 'Guide FlashBank', route: 'flash-bank' },
     { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv'},
+    { name: 'Bleusat', route: 'bleusat'},
     { name: 'Mobile Money', route: 'mobile-money'},
     { name: 'Guide Gestion Stock', route: 'gestion-stock' },
     { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
