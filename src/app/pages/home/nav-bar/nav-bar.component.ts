@@ -49,6 +49,8 @@ export class NavBarComponent {
     { name: 'Guide Flash Cash Lite', route: 'flash-cash-lite' },
     { name: 'Guide Flash Marchand', route: 'flash-marchand' },
     { name: 'Guide FlashBank', route: 'flash-bank' },
+    { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv'},
+    { name: 'Mobile Money', route: 'mobile-money'},
     { name: 'Guide Gestion Stock', route: 'gestion-stock' },
     { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
     { name: 'RakkaCash Operateur', route: 'rakka-operateur' },

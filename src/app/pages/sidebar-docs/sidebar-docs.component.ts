@@ -52,6 +52,7 @@ export class SidebarDocsComponent {
 
     { name: 'Flash Transafer Lite', route: 'flash-cash-lite' },
     { name: 'Guide FlashBank', route: 'flash-bank' },
+    { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv'},
     { name: 'Guide Flash Marchand', route: 'flash-marchand' },
     { name: 'Guide Gestion Stock', route: 'gestion-stock' },
     
