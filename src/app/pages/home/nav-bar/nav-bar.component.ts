@@ -46,7 +46,8 @@ export class NavBarComponent {
   ];
 
   cscOps = [
-    { name: 'Guide Flash Cash Lite', route: 'flash-cash-lite' },
+    { name: 'Flash Transfer Lite', route: 'flash-transfer-lite' },
+    { name: 'Flash Transfer Classique', route: 'flash-transfer-classique'},
     { name: 'Guide Flash Marchand', route: 'flash-marchand' },
     { name: 'Guide FlashBank', route: 'flash-bank' },
     { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv'},

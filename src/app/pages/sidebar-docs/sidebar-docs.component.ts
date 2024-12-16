@@ -50,7 +50,8 @@ export class SidebarDocsComponent {
     { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
     { name: 'RakkaCash Operateur', route: 'rakka-operateur' },
 
-    { name: 'Flash Transafer Lite', route: 'flash-cash-lite' },
+    { name: 'Flash Transfer Lite', route: 'flash-transfer-lite' },
+    { name: 'Flash Transfer Classique', route: 'flash-transfer-classique'},
     { name: 'Guide FlashBank', route: 'flash-bank' },
     { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv'},
     { name: 'Bleusat', route: 'bleusat'},

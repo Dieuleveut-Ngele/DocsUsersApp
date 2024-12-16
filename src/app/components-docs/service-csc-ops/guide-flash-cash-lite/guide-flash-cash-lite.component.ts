@@ -11,6 +11,6 @@ import { PdfExportService } from '../../../services/pdf-export.service';
 export class GuideFlashCashLiteComponent {
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
-    this.pdfExportService.exportToPDF('doc-content', 'Guide Flash Cash Lite');
+    this.pdfExportService.exportToPDF('doc-content', 'Flash Transfer Lite');
   }
 }
