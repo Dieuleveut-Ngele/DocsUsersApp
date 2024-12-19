@@ -35,6 +35,7 @@ import { MobileMoneyComponent } from './components-docs/service-csc-ops/mobile-m
 import { CanalPlusEtEasyTvComponent } from './components-docs/service-csc-ops/canal-plus-et-easy-tv/canal-plus-et-easy-tv.component';
 import { BleusatComponent } from './components-docs/service-csc-ops/bleusat/bleusat.component';
 import { FlashTransferClassiqueComponent } from './components-docs/service-csc-ops/flash-transfer-classique/flash-transfer-classique.component';
+import { ParametrageComptaComponent } from './components-docs/service-finance/parametrage-compta/parametrage-compta.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -69,6 +70,7 @@ export const routes: Routes = [
         component: OperateurVodacomDataComponent,
       },
       { path: 'telco', component: TelcoComponent},
+      { path: 'parametrage-compta', component: ParametrageComptaComponent},
       { path: 'mobile-money', component: MobileMoneyComponent},
       { path: 'rakka-admin', component: RakkacashAdminComponent },
       { path: 'rakka-compliance', component: RakkacashComplianceComponent },

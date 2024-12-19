@@ -83,6 +83,26 @@ html {
   font-size: 16px;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
+}
+
+
+.button-dowload:hover {
+  background-color: #ffeb39; 
+  transform: scale(1.1); 
+  transform: translateX(10px) scale(1.1);
+}
+
+.button-dowload:active {
+  transform: scale(1); 
+  background-color: #ffeb39;
+
+  transform: translateY(5px) scale(0.95); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-dowload:focus {
+  outline: none; 
 }
 
 .download-pdf,
