@@ -49,6 +49,7 @@ export class SidebarDocsComponent {
     { name: 'Ria Operateur', route: 'ria-operateur' },
     { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
     { name: 'RakkaCash Operateur', route: 'rakka-operateur' },
+    { name: 'Sababalar Operateur', route: 'saba-operateur' },
 
     { name: 'Flash Transfer Lite', route: 'flash-transfer-lite' },
     { name: 'Flash Transfer Classique', route: 'flash-transfer-classique'},
@@ -61,8 +62,8 @@ export class SidebarDocsComponent {
     { name: 'Operateur Cash In & Cash Out', route: 'operateur-cash' },
     { name: 'Guide Operateur Telco', route: 'telco' },
     { name: 'Mobile Money', route: 'mobile-money'},
-    { name: 'Operateur Africell Data', route: 'operateur-africell-data' },
-    { name: 'Operateur Vodacom Data', route: 'operateur-vodacom-data' },
+    // { name: 'Operateur Africell Data', route: 'operateur-africell-data' },
+    // { name: 'Operateur Vodacom Data', route: 'operateur-vodacom-data' },
     
     { name: 'Guide Operateur VAS', route: 'operateur-vas' },
     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },

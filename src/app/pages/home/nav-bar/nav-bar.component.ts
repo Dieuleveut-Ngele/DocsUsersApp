@@ -57,6 +57,7 @@ export class NavBarComponent {
     { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
     { name: 'RakkaCash Operateur', route: 'rakka-operateur' },
     { name: 'Ria Operateur', route: 'ria-operateur' },
+    { name: 'Sababalar Operateur', route: 'saba-operateur' },
     { name: 'Operateur Cash In & Cash Out', route: 'operateur-cash' },
     { name: 'Guide Operateur Africell Data', route: 'operateur-africell-data' },
     { name: 'Guide Operateur Telco', route: 'telco' },
@@ -68,7 +69,6 @@ export class NavBarComponent {
   ];
 
   constructor(private router: Router) {}
-
   // Méthode de recherche
   searchDocs() {
     const allDocs = [
@@ -82,18 +82,15 @@ export class NavBarComponent {
       doc.name.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
   }
-
   // Navigation vers le document sélectionné
   navigateTo(route: string) {
     this.activeRoute = route;
     this.router.navigate(['/docs', route]);
     this.closePopup();
   }
-
   openPopup() {
     this.showPopup = true;
   }
-
   closePopup() {
     this.showPopup = false;
   }

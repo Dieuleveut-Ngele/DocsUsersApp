@@ -36,6 +36,7 @@ import { CanalPlusEtEasyTvComponent } from './components-docs/service-csc-ops/ca
 import { BleusatComponent } from './components-docs/service-csc-ops/bleusat/bleusat.component';
 import { FlashTransferClassiqueComponent } from './components-docs/service-csc-ops/flash-transfer-classique/flash-transfer-classique.component';
 import { ParametrageComptaComponent } from './components-docs/service-finance/parametrage-compta/parametrage-compta.component';
+import { SababalarOperateurComponent } from './components-docs/service-csc-ops/sababalar-operateur/sababalar-operateur.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -61,14 +62,14 @@ export const routes: Routes = [
       { path: 'mukuru-compliance', component: MukuruComplianceComponent },
       { path: 'mukuru-finance', component: MukuruFinanceComponent },
       { path: 'mukuru-operateur', component: MukuruOperateurComponent },
-      {
-        path: 'operateur-africell-data',
-        component: OperateurAfricellDataComponent,
-      },
-      {
-        path: 'operateur-vodacom-data',
-        component: OperateurVodacomDataComponent,
-      },
+      // {
+      //   path: 'operateur-africell-data',
+      //   component: OperateurAfricellDataComponent,
+      // },
+      // {
+      //   path: 'operateur-vodacom-data',
+      //   component: OperateurVodacomDataComponent,
+      // },
       { path: 'telco', component: TelcoComponent},
       { path: 'parametrage-compta', component: ParametrageComptaComponent},
       { path: 'mobile-money', component: MobileMoneyComponent},
@@ -85,6 +86,7 @@ export const routes: Routes = [
       { path: 'saba-admin', component: SababalarAdminComponent },
       { path: 'saba-compliance', component: SababalarComplianceComponent },
       { path: 'saba-finance', component: SababalarFinanceComponent },
+      { path: 'saba-operateur', component: SababalarOperateurComponent },
       { path: 'western-union', component: WesternUnionComponent },
     ],
   },
