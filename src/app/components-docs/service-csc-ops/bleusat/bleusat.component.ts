@@ -6,7 +6,7 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   standalone: true,
   imports: [],
   templateUrl: './bleusat.component.html',
-  styleUrl: './bleusat.component.scss'
+  styleUrl: './bleusat.component.scss',
 })
 export class BleusatComponent {
   constructor(private pdfExportService: PdfExportService) {}

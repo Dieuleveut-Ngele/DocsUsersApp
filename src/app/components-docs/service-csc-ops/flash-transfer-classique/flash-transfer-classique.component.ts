@@ -6,11 +6,14 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   standalone: true,
   imports: [],
   templateUrl: './flash-transfer-classique.component.html',
-  styleUrl: './flash-transfer-classique.component.scss'
+  styleUrl: './flash-transfer-classique.component.scss',
 })
 export class FlashTransferClassiqueComponent {
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
-    this.pdfExportService.exportToPDF('doc-content', 'Flash Transfer Classique');
+    this.pdfExportService.exportToPDF(
+      'doc-content',
+      'Flash Transfer Classique',
+    );
   }
 }

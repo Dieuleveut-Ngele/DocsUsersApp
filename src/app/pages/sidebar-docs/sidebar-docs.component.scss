@@ -44,8 +44,8 @@
 
 .sidebar ul li.selected {
   background: linear-gradient(to right, black, rgb(255, 199, 0));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: bold;
   border-radius: 2px;
 }
@@ -88,6 +88,4 @@ li {
   font-family: "Arial, sans-serif";
   overflow: hidden;
   text-align: justify;
-
 }
-

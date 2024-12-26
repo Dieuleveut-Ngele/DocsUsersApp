@@ -6,11 +6,14 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   standalone: true,
   imports: [],
   templateUrl: './sababalar-operateur.component.html',
-  styleUrl: './sababalar-operateur.component.scss'
+  styleUrl: './sababalar-operateur.component.scss',
 })
 export class SababalarOperateurComponent {
   constructor(private pdfExportService: PdfExportService) {}
-    downloadPDF() {
-      this.pdfExportService.exportToPDF('doc-content', 'Guide Sababalar Operateur');
-    }
+  downloadPDF() {
+    this.pdfExportService.exportToPDF(
+      'doc-content',
+      'Guide Sababalar Operateur',
+    );
+  }
 }

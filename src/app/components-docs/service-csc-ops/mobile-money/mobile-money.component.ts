@@ -6,14 +6,11 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   standalone: true,
   imports: [],
   templateUrl: './mobile-money.component.html',
-  styleUrl: './mobile-money.component.scss'
+  styleUrl: './mobile-money.component.scss',
 })
 export class MobileMoneyComponent {
   constructor(private pdfExportService: PdfExportService) {}
   downloadPDF() {
-    this.pdfExportService.exportToPDF(
-      'doc-content',
-      'Guide Mobile Money',
-    );
+    this.pdfExportService.exportToPDF('doc-content', 'Guide Mobile Money');
   }
 }

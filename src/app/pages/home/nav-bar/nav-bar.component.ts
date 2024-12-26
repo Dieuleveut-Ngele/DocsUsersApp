@@ -14,7 +14,7 @@ export class NavBarComponent {
   activeParent: string | null = null;
   activeRoute: string = '';
   public showPopup = false;
-  public searchQuery = ''; 
+  public searchQuery = '';
   filteredDocs: { name: string; route: string }[] = [];
 
   // Documents
@@ -47,12 +47,12 @@ export class NavBarComponent {
 
   cscOps = [
     { name: 'Flash Transfer Lite', route: 'flash-transfer-lite' },
-    { name: 'Flash Transfer Classique', route: 'flash-transfer-classique'},
+    { name: 'Flash Transfer Classique', route: 'flash-transfer-classique' },
     { name: 'Guide Flash Marchand', route: 'flash-marchand' },
     { name: 'Guide FlashBank', route: 'flash-bank' },
-    { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv'},
-    { name: 'Bleusat', route: 'bleusat'},
-    { name: 'Mobile Money', route: 'mobile-money'},
+    { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv' },
+    { name: 'Bleusat', route: 'bleusat' },
+    { name: 'Mobile Money', route: 'mobile-money' },
     { name: 'Guide Gestion Stock', route: 'gestion-stock' },
     { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
     { name: 'RakkaCash Operateur', route: 'rakka-operateur' },

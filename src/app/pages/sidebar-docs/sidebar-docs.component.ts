@@ -6,15 +6,15 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-sidebar-docs',
   standalone: true,
-  imports: [ RouterOutlet, NgClass, CommonModule, RouterLink, FormsModule ],
+  imports: [RouterOutlet, NgClass, CommonModule, RouterLink, FormsModule],
   templateUrl: './sidebar-docs.component.html',
   styleUrl: './sidebar-docs.component.scss',
 })
 export class SidebarDocsComponent {
   activeParent: string | null = null;
   activeRoute: string = '';
-  searchText: string = ''; 
-  filteredDocs: { name: string; route: string }[] = []; 
+  searchText: string = '';
+  filteredDocs: { name: string; route: string }[] = [];
 
   conformite = [
     { name: 'RakkaCash Compliance', route: 'rakka-compliance' },
@@ -44,7 +44,7 @@ export class SidebarDocsComponent {
   ];
 
   cscOps = [
-    { name: 'MoneyGram', route: 'moneygram'},
+    { name: 'MoneyGram', route: 'moneygram' },
     { name: 'Western Union', route: 'western-union' },
     { name: 'Ria Operateur', route: 'ria-operateur' },
     { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
@@ -52,23 +52,22 @@ export class SidebarDocsComponent {
     { name: 'Sababalar Operateur', route: 'saba-operateur' },
 
     { name: 'Flash Transfer Lite', route: 'flash-transfer-lite' },
-    { name: 'Flash Transfer Classique', route: 'flash-transfer-classique'},
+    { name: 'Flash Transfer Classique', route: 'flash-transfer-classique' },
     { name: 'Guide FlashBank', route: 'flash-bank' },
-    { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv'},
-    { name: 'Bleusat', route: 'bleusat'},
+    { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv' },
+    { name: 'Bleusat', route: 'bleusat' },
     { name: 'Guide Flash Marchand', route: 'flash-marchand' },
     { name: 'Guide Gestion Stock', route: 'gestion-stock' },
-    
+
     { name: 'Operateur Cash In & Cash Out', route: 'operateur-cash' },
     { name: 'Guide Operateur Telco', route: 'telco' },
-    { name: 'Mobile Money', route: 'mobile-money'},
+    { name: 'Mobile Money', route: 'mobile-money' },
     // { name: 'Operateur Africell Data', route: 'operateur-africell-data' },
     // { name: 'Operateur Vodacom Data', route: 'operateur-vodacom-data' },
-    
+
     { name: 'Guide Operateur VAS', route: 'operateur-vas' },
     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
   ];
-
 
   constructor(private router: Router) {}
 
@@ -87,12 +86,12 @@ export class SidebarDocsComponent {
   }
 
   // Navigation vers le document sélectionné
-navigateTo(route: string) {  
-  this.activeRoute = route;  
-  this.router.navigate(['/docs', route]).then(() => {   
-      window.scrollTo(0, 0);  
-  });  
-}
+  navigateTo(route: string) {
+    this.activeRoute = route;
+    this.router.navigate(['/docs', route]).then(() => {
+      window.scrollTo(0, 0);
+    });
+  }
 
   // Fonction pour changer la catégorie parent
   toggleParent(parent: string) {

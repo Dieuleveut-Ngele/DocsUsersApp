@@ -49,7 +49,7 @@ export class GlossaireComponent {
     { term: 'CFC', definition: 'Compagnie Financiere au Congo.' },
     { term: 'MG', definition: 'Money Gram' },
     { term: 'WU', definition: 'Western Union' },
-    
+
     {
       term: 'OPS',
       definition:

@@ -29,7 +29,7 @@ import { SababalarFinanceComponent } from './components-docs/service-finance/sab
 import { WesternUnionComponent } from './components-docs/service-csc-ops/western-union/western-union.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { HomeComponent } from './pages/home/home/home.component';
-import { GlossaireComponent } from './pages/glossaire/glossaire.component';  
+import { GlossaireComponent } from './pages/glossaire/glossaire.component';
 import { TelcoComponent } from './components-docs/service-csc-ops/telco/telco.component';
 import { MobileMoneyComponent } from './components-docs/service-csc-ops/mobile-money/mobile-money.component';
 import { CanalPlusEtEasyTvComponent } from './components-docs/service-csc-ops/canal-plus-et-easy-tv/canal-plus-et-easy-tv.component';
@@ -51,10 +51,13 @@ export const routes: Routes = [
       { path: 'introduction', component: IntroductionComponent },
       { path: 'bulk-notification', component: BulkNotificationComponent },
       { path: 'flash-bank', component: GuideFlashBankComponent },
-      { path: 'canalpluseasytv', component: CanalPlusEtEasyTvComponent},
-      { path: 'bleusat', component: BleusatComponent},
+      { path: 'canalpluseasytv', component: CanalPlusEtEasyTvComponent },
+      { path: 'bleusat', component: BleusatComponent },
       { path: 'flash-transfer-lite', component: GuideFlashCashLiteComponent },
-      { path: 'flash-transfer-classique', component: FlashTransferClassiqueComponent},
+      {
+        path: 'flash-transfer-classique',
+        component: FlashTransferClassiqueComponent,
+      },
       { path: 'flash-marchand', component: GuideFlashMarchandComponent },
       { path: 'gestion-stock', component: GuideGestionStockComponent },
       { path: 'operateur-cash', component: OperateurCashinCashoutComponent },
@@ -70,9 +73,9 @@ export const routes: Routes = [
       //   path: 'operateur-vodacom-data',
       //   component: OperateurVodacomDataComponent,
       // },
-      { path: 'telco', component: TelcoComponent},
-      { path: 'parametrage-compta', component: ParametrageComptaComponent},
-      { path: 'mobile-money', component: MobileMoneyComponent},
+      { path: 'telco', component: TelcoComponent },
+      { path: 'parametrage-compta', component: ParametrageComptaComponent },
+      { path: 'mobile-money', component: MobileMoneyComponent },
       { path: 'rakka-admin', component: RakkacashAdminComponent },
       { path: 'rakka-compliance', component: RakkacashComplianceComponent },
       { path: 'rakka-finance', component: RakkacashFinanceComponent },
@@ -91,4 +94,3 @@ export const routes: Routes = [
     ],
   },
 ];
-

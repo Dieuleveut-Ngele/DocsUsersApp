@@ -6,7 +6,7 @@ import { PdfExportService } from '../../../services/pdf-export.service';
   standalone: true,
   imports: [],
   templateUrl: './canal-plus-et-easy-tv.component.html',
-  styleUrl: './canal-plus-et-easy-tv.component.scss'
+  styleUrl: './canal-plus-et-easy-tv.component.scss',
 })
 export class CanalPlusEtEasyTvComponent {
   constructor(private pdfExportService: PdfExportService) {}

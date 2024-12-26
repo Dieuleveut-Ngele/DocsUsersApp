@@ -7,19 +7,19 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './scroll-to-top.component.html',
-  styleUrl: './scroll-to-top.component.scss'
+  styleUrl: './scroll-to-top.component.scss',
 })
 export class ScrollToTopComponent {
-  isVisible: boolean = false;  
+  isVisible: boolean = false;
 
-  constructor(private scrollService: ScrollService) {}  
+  constructor(private scrollService: ScrollService) {}
 
-  @HostListener('window:scroll', [])  
-  onWindowScroll() {  
-    this.isVisible = this.scrollService.isScrolledMoreThan(800);  
-  }  
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isVisible = this.scrollService.isScrolledMoreThan(800);
+  }
 
-  scrollToTop() {  
-    this.scrollService.scrollToTop();  
-  } 
+  scrollToTop() {
+    this.scrollService.scrollToTop();
+  }
 }
