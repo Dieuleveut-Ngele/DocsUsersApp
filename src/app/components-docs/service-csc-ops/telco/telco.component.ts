@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { PdfExportService } from '../../../services/pdf-export.service';
 
 @Component({
-  selector: 'app-telco',
-  standalone: true,
-  imports: [],
-  templateUrl: './telco.component.html',
-  styleUrl: './telco.component.scss',
+    selector: 'app-telco',
+    imports: [],
+    templateUrl: './telco.component.html',
+    styleUrl: './telco.component.scss'
 })
 export class TelcoComponent {
   constructor(private pdfExportService: PdfExportService) {}

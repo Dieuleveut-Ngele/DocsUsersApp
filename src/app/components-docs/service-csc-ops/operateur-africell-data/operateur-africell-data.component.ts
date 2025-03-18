@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { PdfExportService } from '../../../services/pdf-export.service';
 
 @Component({
-  selector: 'app-operateur-africell-data',
-  standalone: true,
-  imports: [],
-  templateUrl: './operateur-africell-data.component.html',
-  styleUrl: './operateur-africell-data.component.scss',
+    selector: 'app-operateur-africell-data',
+    imports: [],
+    templateUrl: './operateur-africell-data.component.html',
+    styleUrl: './operateur-africell-data.component.scss'
 })
 export class OperateurAfricellDataComponent {
   constructor(private pdfExportService: PdfExportService) {}

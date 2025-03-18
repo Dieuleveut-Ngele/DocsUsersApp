@@ -4,10 +4,9 @@ import { HeroSectionComponent } from '../hero-section/hero-section.component';
 import { SearchPopupComponent } from '../../../search-popup/search-popup.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [NavBarComponent, HeroSectionComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+    selector: 'app-home',
+    imports: [NavBarComponent, HeroSectionComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {}

@@ -4,11 +4,10 @@ import { RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-nav-bar',
-  standalone: true,
-  imports: [RouterLink, NgClass, CommonModule, RouterLinkActive, FormsModule],
-  templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss',
+    selector: 'app-nav-bar',
+    imports: [RouterLink, NgClass, CommonModule, RouterLinkActive, FormsModule],
+    templateUrl: './nav-bar.component.html',
+    styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
   activeParent: string | null = null;

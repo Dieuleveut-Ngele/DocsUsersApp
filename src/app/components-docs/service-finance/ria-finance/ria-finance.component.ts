@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { PdfExportService } from '../../../services/pdf-export.service';
 
 @Component({
-  selector: 'app-ria-finance',
-  standalone: true,
-  imports: [],
-  templateUrl: './ria-finance.component.html',
-  styleUrl: './ria-finance.component.scss',
+    selector: 'app-ria-finance',
+    imports: [],
+    templateUrl: './ria-finance.component.html',
+    styleUrl: './ria-finance.component.scss'
 })
 export class RiaFinanceComponent {
   constructor(private pdfExportService: PdfExportService) {}

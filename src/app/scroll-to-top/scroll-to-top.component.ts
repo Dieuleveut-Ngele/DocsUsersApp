@@ -3,11 +3,10 @@ import { ScrollService } from '../services/scroll.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-scroll-to-top',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './scroll-to-top.component.html',
-  styleUrl: './scroll-to-top.component.scss',
+    selector: 'app-scroll-to-top',
+    imports: [CommonModule],
+    templateUrl: './scroll-to-top.component.html',
+    styleUrl: './scroll-to-top.component.scss'
 })
 export class ScrollToTopComponent {
   isVisible: boolean = false;

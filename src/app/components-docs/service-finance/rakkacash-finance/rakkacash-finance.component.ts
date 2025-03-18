@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { PdfExportService } from '../../../services/pdf-export.service';
 
 @Component({
-  selector: 'app-rakkacash-finance',
-  standalone: true,
-  imports: [],
-  templateUrl: './rakkacash-finance.component.html',
-  styleUrl: './rakkacash-finance.component.scss',
+    selector: 'app-rakkacash-finance',
+    imports: [],
+    templateUrl: './rakkacash-finance.component.html',
+    styleUrl: './rakkacash-finance.component.scss'
 })
 export class RakkacashFinanceComponent {
   constructor(private pdfExportService: PdfExportService) {}

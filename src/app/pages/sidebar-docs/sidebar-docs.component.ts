@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-sidebar-docs',
-  standalone: true,
-  imports: [RouterOutlet, NgClass, CommonModule, RouterLink, FormsModule],
-  templateUrl: './sidebar-docs.component.html',
-  styleUrl: './sidebar-docs.component.scss',
+    selector: 'app-sidebar-docs',
+    imports: [RouterOutlet, NgClass, CommonModule, RouterLink, FormsModule],
+    templateUrl: './sidebar-docs.component.html',
+    styleUrl: './sidebar-docs.component.scss'
 })
 export class SidebarDocsComponent {
   activeParent: string | null = null;

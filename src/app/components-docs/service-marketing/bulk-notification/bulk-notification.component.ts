@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { PdfExportService } from '../../../services/pdf-export.service';
 
 @Component({
-  selector: 'app-bulk-notification',
-  standalone: true,
-  imports: [],
-  templateUrl: './bulk-notification.component.html',
-  styleUrl: './bulk-notification.component.scss',
+    selector: 'app-bulk-notification',
+    imports: [],
+    templateUrl: './bulk-notification.component.html',
+    styleUrl: './bulk-notification.component.scss'
 })
 export class BulkNotificationComponent {
   constructor(private pdfExportService: PdfExportService) {}

@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { PdfExportService } from '../../../services/pdf-export.service';
 
 @Component({
-  selector: 'app-sababalar-finance',
-  standalone: true,
-  imports: [],
-  templateUrl: './sababalar-finance.component.html',
-  styleUrl: './sababalar-finance.component.scss',
+    selector: 'app-sababalar-finance',
+    imports: [],
+    templateUrl: './sababalar-finance.component.html',
+    styleUrl: './sababalar-finance.component.scss'
 })
 export class SababalarFinanceComponent {
   constructor(private pdfExportService: PdfExportService) {}

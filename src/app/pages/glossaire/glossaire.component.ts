@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-glossaire',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './glossaire.component.html',
-  styleUrl: './glossaire.component.scss',
+    selector: 'app-glossaire',
+    imports: [CommonModule],
+    templateUrl: './glossaire.component.html',
+    styleUrl: './glossaire.component.scss'
 })
 export class GlossaireComponent {
   glossary = [
