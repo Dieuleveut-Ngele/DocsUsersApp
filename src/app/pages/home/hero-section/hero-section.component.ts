@@ -1,10 +1,10 @@
-import { NgClass } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-hero-section',
-    imports: [RouterLink, NgClass],
+    
     templateUrl: './hero-section.component.html',
     styleUrl: './hero-section.component.scss'
 })

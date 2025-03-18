@@ -1,11 +1,11 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-sidebar-docs',
-    imports: [RouterOutlet, NgClass, CommonModule, RouterLink, FormsModule],
+    imports: [RouterOutlet, NgClass, CommonModule, FormsModule],
     templateUrl: './sidebar-docs.component.html',
     styleUrl: './sidebar-docs.component.scss'
 })

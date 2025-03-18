@@ -1,11 +1,11 @@
-import { CommonModule, NgClass } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-nav-bar',
-    imports: [RouterLink, NgClass, CommonModule, RouterLinkActive, FormsModule],
+    imports: [RouterLink, CommonModule, RouterLinkActive, FormsModule],
     templateUrl: './nav-bar.component.html',
     styleUrl: './nav-bar.component.scss'
 })
