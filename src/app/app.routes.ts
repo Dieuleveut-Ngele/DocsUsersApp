@@ -37,6 +37,7 @@ import { BleusatComponent } from './components-docs/service-csc-ops/bleusat/bleu
 import { FlashTransferClassiqueComponent } from './components-docs/service-csc-ops/flash-transfer-classique/flash-transfer-classique.component';
 import { ParametrageComptaComponent } from './components-docs/service-finance/parametrage-compta/parametrage-compta.component';
 import { SababalarOperateurComponent } from './components-docs/service-csc-ops/sababalar-operateur/sababalar-operateur.component';
+import { ApiMukuruComponent } from './components-docs/service-IT/api-mukuru/api-mukuru.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -91,6 +92,7 @@ export const routes: Routes = [
       { path: 'saba-finance', component: SababalarFinanceComponent },
       { path: 'saba-operateur', component: SababalarOperateurComponent },
       { path: 'western-union', component: WesternUnionComponent },
+      { path: 'api-mukuru', component: ApiMukuruComponent}
     ],
   },
 ];

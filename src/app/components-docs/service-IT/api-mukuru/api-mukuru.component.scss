@@ -1,0 +1,134 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+#doc-content {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  
+    h2, h3 {
+      color: #2c3e50;
+      margin-top: 1.5rem;
+    }
+  
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-left: 4px solid #007acc;
+      overflow-x: auto;
+    }
+  
+    code {
+      font-family: monospace;
+      color: #c7254e;
+    }
+  
+    ul {
+      padding-left: 1.5rem;
+    }
+  }
+#doc-content {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  
+    h2, h3 {
+      color: #2c3e50;
+      margin-top: 1.5rem;
+    }
+  
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      border-left: 4px solid #007acc;
+    }
+  
+    .code-block {
+      position: relative;
+      margin-bottom: 1rem;
+  
+      button {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        padding: 4px 8px;
+        font-size: 0.8rem;
+        background-color: #ffd139;
+        color: #856404;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+  
+      th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+      }
+  
+      thead {
+        background-color: #f0f0f0;
+      }
+    }
+  
+    ul {
+      padding-left: 1.5rem;
+    }
+  }
+
+  .confidential-banner {
+    background: #fff3cd;
+    color: #856404;
+    border-left: 6px solid #ffc107;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    border-radius: 5px;
+  }
+  
+  .summary-section {
+    margin-bottom: 2rem;
+  
+    h3 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+        border-bottom: 1px dashed #ccc;
+      }
+  
+      .page {
+        color: #333;
+        font-weight: weight;
+        min-width: 10px;
+        text-align: right;
+      }
+    }
+  }
+  
+   
+  

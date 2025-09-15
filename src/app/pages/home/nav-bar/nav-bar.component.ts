@@ -34,6 +34,7 @@ export class NavBarComponent {
     { name: 'RakkaCash Admin', route: 'rakka-admin' },
     { name: 'Sababalar Admin', route: 'saba-admin' },
     { name: 'Ria Admin', route: 'ria-admin' },
+    { name: 'API Mukuru', route: 'api-mukuru'}
   ];
 
   finance = [

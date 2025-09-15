@@ -16,7 +16,7 @@ export class PdfExportService {
       const opt = {
         margin: 0.3,
         filename: `${fileName}.pdf`,
-        image: { type: 'jpeg', quality: 0.8 },
+        image: { type: 'jpeg', quality: 0.9 },
         html2canvas: { scale: 2, useCORS: true },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
       };
