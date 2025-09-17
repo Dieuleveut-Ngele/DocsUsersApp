@@ -102,29 +102,31 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 30px;
-  background-color: #000000;
-  // margin-bottom: 100px;
+  padding: 8px 30px;
   z-index: 1000;
+  background: rgba(1, 0, 22, 0.8); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.185); 
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 22px;
   padding-right: 30px;
   margin: 0;
   color: #ffffff;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 .logo-image {
   height: 55px;
   width: auto;
-  margin-right: 20px;
+  margin-right: 5px;
   vertical-align: middle;
 }
 
 .nav-links {
   margin-right: 80px;
+  backdrop-filter: blur(5px); 
 }
 
 .nav-links a {
@@ -140,12 +142,16 @@ header {
 
 .nav-links a:hover {
   color: #ffc700;
+  border-bottom: 1px solid #ffc700;
+  
+  
 }
 
 .nav-item.active {
   color: #ffc700;
   font-weight: bold;
   border-bottom: 1px solid #ffc700;
+  border-radius: 50px;
 }
 
 .contact-btn,
