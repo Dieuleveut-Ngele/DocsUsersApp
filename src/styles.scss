@@ -26,67 +26,6 @@
   font-style: normal;
 }
 
-// .titillium-web-light {
-//   font-family: "Titillium Web", sans-serif;
-//   font-weight: 300;
-//   font-style: normal;
-// }
-
-// .titillium-web-regular {
-//   font-family: "Titillium Web", sans-serif;
-//   font-weight: 400;
-//   font-style: normal;
-// }
-
-// .titillium-web-semibold {
-//   font-family: "Titillium Web", sans-serif;
-//   font-weight: 600;
-//   font-style: normal;
-// }
-
-// .titillium-web-bold {
-//   font-family: "Titillium Web", sans-serif;
-//   font-weight: 700;
-//   font-style: normal;
-// }
-
-// .titillium-web-black {
-//   font-family: "Titillium Web", sans-serif;
-//   font-weight: 900;
-//   font-style: normal;
-// }
-
-// .titillium-web-extralight-italic {
-//   font-family: "Titillium Web", sans-serif;
-//   font-weight: 200;
-//   font-style: italic;
-// }
-
-// .titillium-web-light-italic {
-//   font-family: "Titillium Web", sans-serif;
-//   font-weight: 300;
-//   font-style: italic;
-// }
-
-// .titillium-web-regular-italic {
-//   font-family: "Titillium Web", sans-serif;
-//   font-weight: 400;
-//   font-style: italic;
-// }
-
-// .titillium-web-semibold-italic {
-//   font-family: "Titillium Web", sans-serif;
-//   font-weight: 600;
-//   font-style: italic;
-// }
-
-// .titillium-web-bold-italic {
-//   font-family: "Titillium Web", sans-serif;
-//   font-weight: 700;
-//   font-style: italic;
-// }
-
-
 html,
 body {
   margin: 0;
@@ -140,9 +79,10 @@ html {
 }
 
 .button-dowload {
-  background-color: #ffd800;
+  background: linear-gradient(135deg, #ffc400, #ffd800);
   text-decoration: none;
   color: #000;
+  font-weight: 400;
   padding: 10px 20px;
   margin-left: 250px;
   border: none;
@@ -152,21 +92,14 @@ html {
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
+
 }
 
 .button-dowload:hover {
-  background-color: #ffeb39;
-  transform: scale(1.1);
-  transform: translateX(10px) scale(1.1);
+  background-color: #ff9900;
+  transform: translateY(-2px) scale(1.1);
 }
 
-.button-dowload:active {
-  transform: scale(1);
-  background-color: #ffeb39;
-
-  transform: translateY(5px) scale(0.95);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
 
 .button-dowload:focus {
   outline: none;
