@@ -1,13 +1,125 @@
+// import { CommonModule, NgClass } from '@angular/common';
+// import { Component } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
+// import { Router, RouterOutlet } from '@angular/router';
+
+// @Component({
+//     selector: 'app-sidebar-docs',
+//     imports: [RouterOutlet, NgClass, CommonModule, FormsModule],
+//     templateUrl: './sidebar-docs.component.html',
+//     styleUrl: './sidebar-docs.component.scss'
+// })
+// export class SidebarDocsComponent {
+//   activeParent: string | null = null;
+//   activeRoute: string = '';
+//   searchText: string = '';
+//   filteredDocs: { name: string; route: string }[] = [];
+
+//   // Attributs d’accès utilisateur
+//   userAccess = {
+//     finance: false,
+//     it: false,
+//     conformite: false,
+//     cscOps: false,
+//     marketing: false
+//   };
+
+//   conformite = [
+//     { name: 'RakkaCash Compliance', route: 'rakka-compliance' },
+//     { name: 'Mukuru Compliance', route: 'mukuru-compliance' },
+//     { name: 'Ria Compliance', route: 'ria-compliance' },
+//     { name: 'Sababalar Compliance', route: 'saba-compliance' },
+//   ];
+
+//   marketing = [
+//     { name: 'Flash Contact', route: 'flash-contact' },
+//     { name: 'Bulk Notification', route: 'bulk-notification' },
+//   ];
+
+//   it = [
+//     { name: 'Reporting Flash Id', route: 'reporting-flashid' },
+//     { name: 'RakkaCash Admin', route: 'rakka-admin' },
+//     { name: 'Sababalar Admin', route: 'saba-admin' },
+//     { name: 'Ria Admin', route: 'ria-admin' },
+//     { name: 'API Mukuru', route: 'api-mukuru'}
+//   ];
+
+//   finance = [
+//     { name: 'Mukuru Finance', route: 'mukuru-finance' },
+//     { name: 'RakkaCash Finance', route: 'rakka-finance' },
+//     { name: 'Sababalar Finance', route: 'saba-finance' },
+//     { name: 'Ria Finance', route: 'ria-finance' },
+//     { name: 'Parametrage Compta', route: 'parametrage-compta' },
+//   ];
+
+//   cscOps = [
+//     { name: 'MoneyGram', route: 'moneygram' },
+//     { name: 'Western Union', route: 'western-union' },
+//     { name: 'Ria Operateur', route: 'ria-operateur' },
+//     { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
+//     { name: 'RakkaCash Operateur', route: 'rakka-operateur' },
+//     { name: 'Sababalar Operateur', route: 'saba-operateur' },
+
+//     { name: 'Flash Transfer Lite', route: 'flash-transfer-lite' },
+//     { name: 'Flash Transfer Classique', route: 'flash-transfer-classique' },
+//     { name: 'Guide FlashBank', route: 'flash-bank' },
+//     { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv' },
+//     { name: 'Bleusat', route: 'bleusat' },
+//     { name: 'Guide Flash Marchand', route: 'flash-marchand' },
+//     { name: 'Guide Gestion Stock', route: 'gestion-stock' },
+
+//     { name: 'Operateur Cash In & Cash Out', route: 'operateur-cash' },
+//     { name: 'Guide Operateur Telco', route: 'telco' },
+//     { name: 'Mobile Money', route: 'mobile-money' },
+//     // { name: 'Operateur Africell Data', route: 'operateur-africell-data' },
+//     // { name: 'Operateur Vodacom Data', route: 'operateur-vodacom-data' },
+
+//     { name: 'Guide Operateur VAS', route: 'operateur-vas' },
+//     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
+//   ];
+
+//   constructor(private router: Router) {}
+
+//   // Fonction de recherche pour filtrer les documents
+//   searchDocs() {
+//     const allDocs = [
+//       ...this.conformite,
+//       ...this.marketing,
+//       ...this.it,
+//       ...this.finance,
+//       ...this.cscOps,
+//     ];
+//     this.filteredDocs = allDocs.filter((doc) =>
+//       doc.name.toLowerCase().includes(this.searchText.toLowerCase()),
+//     );
+//   }
+
+//   // Navigation vers le document sélectionné
+//   navigateTo(route: string) {
+//     this.activeRoute = route;
+//     this.router.navigate(['/docs', route]).then(() => {
+//       window.scrollTo(0, 0);
+//     });
+//   }
+
+//   // Fonction pour changer la catégorie parent
+//   toggleParent(parent: string) {
+//     this.activeParent = this.activeParent === parent ? null : parent;
+//   }
+// }
+
 import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
+import { UserAccessService } from '../../services/user-access.service';
 
 @Component({
-    selector: 'app-sidebar-docs',
-    imports: [RouterOutlet, NgClass, CommonModule, FormsModule],
-    templateUrl: './sidebar-docs.component.html',
-    styleUrl: './sidebar-docs.component.scss'
+  selector: 'app-sidebar-docs',
+  standalone: true,
+  imports: [RouterOutlet, NgClass, CommonModule, FormsModule],
+  templateUrl: './sidebar-docs.component.html',
+  styleUrl: './sidebar-docs.component.scss'
 })
 export class SidebarDocsComponent {
   activeParent: string | null = null;
@@ -15,6 +127,10 @@ export class SidebarDocsComponent {
   searchText: string = '';
   filteredDocs: { name: string; route: string }[] = [];
 
+  // Attributs récupérés via le service
+  userAccess: any;
+
+  // === LISTES DE DOCUMENTATION ===
   conformite = [
     { name: 'RakkaCash Compliance', route: 'rakka-compliance' },
     { name: 'Mukuru Compliance', route: 'mukuru-compliance' },
@@ -32,7 +148,7 @@ export class SidebarDocsComponent {
     { name: 'RakkaCash Admin', route: 'rakka-admin' },
     { name: 'Sababalar Admin', route: 'saba-admin' },
     { name: 'Ria Admin', route: 'ria-admin' },
-    { name: 'API Mukuru', route: 'api-mukuru'}
+    { name: 'API Mukuru', route: 'api-mukuru' }
   ];
 
   finance = [
@@ -50,7 +166,6 @@ export class SidebarDocsComponent {
     { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
     { name: 'RakkaCash Operateur', route: 'rakka-operateur' },
     { name: 'Sababalar Operateur', route: 'saba-operateur' },
-
     { name: 'Flash Transfer Lite', route: 'flash-transfer-lite' },
     { name: 'Flash Transfer Classique', route: 'flash-transfer-classique' },
     { name: 'Guide FlashBank', route: 'flash-bank' },
@@ -58,20 +173,34 @@ export class SidebarDocsComponent {
     { name: 'Bleusat', route: 'bleusat' },
     { name: 'Guide Flash Marchand', route: 'flash-marchand' },
     { name: 'Guide Gestion Stock', route: 'gestion-stock' },
-
     { name: 'Operateur Cash In & Cash Out', route: 'operateur-cash' },
     { name: 'Guide Operateur Telco', route: 'telco' },
     { name: 'Mobile Money', route: 'mobile-money' },
-    // { name: 'Operateur Africell Data', route: 'operateur-africell-data' },
-    // { name: 'Operateur Vodacom Data', route: 'operateur-vodacom-data' },
-
     { name: 'Guide Operateur VAS', route: 'operateur-vas' },
     { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
   ];
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private userAccessService: UserAccessService
+  ) {}
 
-  // Fonction de recherche pour filtrer les documents
+  ngOnInit() {
+    // Récupère les accès depuis le service
+    this.userAccess = this.userAccessService.getAccess();
+
+    // 🧪 Exemple temporaire (à remplacer plus tard par backend)
+    this.userAccessService.setAccess({
+      finance: true,
+      it: true,
+      conformite: true,
+      cscOps: true,
+      marketing: false
+    });
+    this.userAccess = this.userAccessService.getAccess();
+  }
+
+  // Fonction de recherche
   searchDocs() {
     const allDocs = [
       ...this.conformite,
@@ -85,7 +214,7 @@ export class SidebarDocsComponent {
     );
   }
 
-  // Navigation vers le document sélectionné
+  // Navigation
   navigateTo(route: string) {
     this.activeRoute = route;
     this.router.navigate(['/docs', route]).then(() => {
@@ -93,7 +222,7 @@ export class SidebarDocsComponent {
     });
   }
 
-  // Fonction pour changer la catégorie parent
+  // Afficher / masquer une catégorie
   toggleParent(parent: string) {
     this.activeParent = this.activeParent === parent ? null : parent;
   }
