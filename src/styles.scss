@@ -137,3 +137,16 @@ html {
   page-break-inside: avoid;
   margin-bottom: 10px;
 }
+
+.highlight {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.highlight-focus {
+  background-color: orange !important;
+  transition: background-color 0.8s ease;
+}

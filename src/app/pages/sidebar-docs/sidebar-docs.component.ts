@@ -1,8 +1,8 @@
 import { CommonModule, NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
-import { UserAccessService } from '../../services/user-access.service';
+import { UserAccessService, UserAccess } from '../../services/user-access.service';
 
 @Component({
   selector: 'app-sidebar-docs',
@@ -11,63 +11,67 @@ import { UserAccessService } from '../../services/user-access.service';
   templateUrl: './sidebar-docs.component.html',
   styleUrl: './sidebar-docs.component.scss'
 })
-export class SidebarDocsComponent {
+export class SidebarDocsComponent implements OnInit {
+  userAccess: UserAccess = {
+    finance: false,
+    it: false,
+    conformite: false,
+    cscOps: false,
+    marketing: false
+  };
+
   activeParent: string | null = null;
   activeRoute: string = '';
   searchText: string = '';
   filteredDocs: { name: string; route: string }[] = [];
 
-  // Attributs récupérés via le service
-  userAccess: any;
-
-  // === LISTES DE DOCUMENTATION ===
   conformite = [
-    { name: 'RakkaCash Compliance', route: 'rakka-compliance' },
-    { name: 'Mukuru Compliance', route: 'mukuru-compliance' },
-    { name: 'Ria Compliance', route: 'ria-compliance' },
-    { name: 'Sababalar Compliance', route: 'saba-compliance' },
+    { name: 'RakkaCash Compliance', route: 'rakka-compliance', category: 'conformite' },
+    { name: 'Mukuru Compliance', route: 'mukuru-compliance', category: 'conformite' },
+    { name: 'Ria Compliance', route: 'ria-compliance', category: 'conformite' },
+    { name: 'Sababalar Compliance', route: 'saba-compliance', category: 'conformite' },
   ];
 
   marketing = [
-    { name: 'Flash Contact', route: 'flash-contact' },
-    { name: 'Bulk Notification', route: 'bulk-notification' },
+    { name: 'Flash Contact', route: 'flash-contact', category: 'marketing' },
+    { name: 'Bulk Notification', route: 'bulk-notification', category: 'marketing' },
   ];
 
   it = [
-    { name: 'Reporting Flash Id', route: 'reporting-flashid' },
-    { name: 'RakkaCash Admin', route: 'rakka-admin' },
-    { name: 'Sababalar Admin', route: 'saba-admin' },
-    { name: 'Ria Admin', route: 'ria-admin' },
-    { name: 'API Mukuru', route: 'api-mukuru' }
+    { name: 'Reporting Flash Id', route: 'reporting-flashid', category: 'it' },
+    { name: 'RakkaCash Admin', route: 'rakka-admin', category: 'it' },
+    { name: 'Sababalar Admin', route: 'saba-admin', category: 'it' },
+    { name: 'Ria Admin', route: 'ria-admin', category: 'it' },
+    { name: 'API Mukuru', route: 'api-mukuru', category: 'it' }
   ];
 
   finance = [
-    { name: 'Mukuru Finance', route: 'mukuru-finance' },
-    { name: 'RakkaCash Finance', route: 'rakka-finance' },
-    { name: 'Sababalar Finance', route: 'saba-finance' },
-    { name: 'Ria Finance', route: 'ria-finance' },
-    { name: 'Parametrage Compta', route: 'parametrage-compta' },
+    { name: 'Mukuru Finance', route: 'mukuru-finance', category: 'finance' },
+    { name: 'RakkaCash Finance', route: 'rakka-finance', category: 'finance' },
+    { name: 'Sababalar Finance', route: 'saba-finance', category: 'finance' },
+    { name: 'Ria Finance', route: 'ria-finance', category: 'finance' },
+    { name: 'Parametrage Compta', route: 'parametrage-compta', category: 'finance' },
   ];
 
   cscOps = [
-    { name: 'MoneyGram', route: 'moneygram' },
-    { name: 'Western Union', route: 'western-union' },
-    { name: 'Ria Operateur', route: 'ria-operateur' },
-    { name: 'Mukuru Operateur', route: 'mukuru-operateur' },
-    { name: 'RakkaCash Operateur', route: 'rakka-operateur' },
-    { name: 'Sababalar Operateur', route: 'saba-operateur' },
-    { name: 'Flash Transfer Lite', route: 'flash-transfer-lite' },
-    { name: 'Flash Transfer Classique', route: 'flash-transfer-classique' },
-    { name: 'Guide FlashBank', route: 'flash-bank' },
-    { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv' },
-    { name: 'Bleusat', route: 'bleusat' },
-    { name: 'Guide Flash Marchand', route: 'flash-marchand' },
-    { name: 'Guide Gestion Stock', route: 'gestion-stock' },
-    { name: 'Operateur Cash In & Cash Out', route: 'operateur-cash' },
-    { name: 'Guide Operateur Telco', route: 'telco' },
-    { name: 'Mobile Money', route: 'mobile-money' },
-    { name: 'Guide Operateur VAS', route: 'operateur-vas' },
-    { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax' },
+    { name: 'MoneyGram', route: 'moneygram', category: 'cscOps' },
+    { name: 'Western Union', route: 'western-union', category: 'cscOps' },
+    { name: 'Ria Operateur', route: 'ria-operateur', category: 'cscOps' },
+    { name: 'Mukuru Operateur', route: 'mukuru-operateur', category: 'cscOps' },
+    { name: 'RakkaCash Operateur', route: 'rakka-operateur', category: 'cscOps' },
+    { name: 'Sababalar Operateur', route: 'saba-operateur', category: 'cscOps' },
+    { name: 'Flash Transfer Lite', route: 'flash-transfer-lite', category: 'cscOps' },
+    { name: 'Flash Transfer Classique', route: 'flash-transfer-classique', category: 'cscOps' },
+    { name: 'Guide FlashBank', route: 'flash-bank', category: 'cscOps' },
+    { name: 'Canal+ | Easy Tv', route: 'canalpluseasytv', category: 'cscOps' },
+    { name: 'Bleusat', route: 'bleusat', category: 'cscOps' },
+    { name: 'Guide Flash Marchand', route: 'flash-marchand', category: 'cscOps' },
+    { name: 'Guide Gestion Stock', route: 'gestion-stock', category: 'cscOps' },
+    { name: 'Operateur Cash In & Cash Out', route: 'operateur-cash', category: 'cscOps' },
+    { name: 'Guide Operateur Telco', route: 'telco', category: 'cscOps' },
+    { name: 'Mobile Money', route: 'mobile-money', category: 'cscOps' },
+    { name: 'Guide Operateur VAS', route: 'operateur-vas', category: 'cscOps' },
+    { name: 'Guide Utilisateur PAYTAX', route: 'guide-paytax', category: 'cscOps' },
   ];
 
   constructor(
@@ -76,20 +80,13 @@ export class SidebarDocsComponent {
   ) {}
 
   ngOnInit() {
-    // Récupère les accès depuis le service
-    this.userAccess = this.userAccessService.getAccess();
-
-    this.userAccessService.setAccess({
-      finance: true,
-      it: true,
-      conformite: true,
-      cscOps: true,
-      marketing: false
+    this.userAccessService.getUserAccess().subscribe((access) => {
+      this.userAccess = access;
+      console.log('Accès utilisateur chargés :', this.userAccess);
     });
-    this.userAccess = this.userAccessService.getAccess();
   }
 
-  // Fonction de recherche
+  /** 🔍 Recherche améliorée : tient compte des accès utilisateur */
   searchDocs() {
     const allDocs = [
       ...this.conformite,
@@ -98,12 +95,16 @@ export class SidebarDocsComponent {
       ...this.finance,
       ...this.cscOps,
     ];
-    this.filteredDocs = allDocs.filter((doc) =>
-      doc.name.toLowerCase().includes(this.searchText.toLowerCase()),
-    );
+
+    const search = this.searchText.toLowerCase();
+
+    this.filteredDocs = allDocs.filter((doc) => {
+      const category = doc.category as keyof UserAccess;
+      const hasAccess = this.userAccess[category];
+      return hasAccess && doc.name.toLowerCase().includes(search);
+    });
   }
 
-  // Navigation
   navigateTo(route: string) {
     this.activeRoute = route;
     this.router.navigate(['/docs', route]).then(() => {
@@ -111,7 +112,6 @@ export class SidebarDocsComponent {
     });
   }
 
-  // Afficher / masquer une catégorie
   toggleParent(parent: string) {
     this.activeParent = this.activeParent === parent ? null : parent;
   }

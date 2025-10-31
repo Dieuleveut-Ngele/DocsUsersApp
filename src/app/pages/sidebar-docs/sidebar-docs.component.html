@@ -20,109 +20,104 @@
 
     <ul>
       <!-- CSC OPS -->
-      <ng-container *ngIf="userAccess.cscOps">
+      <li
+        *ngIf="userAccess.cscOps"
+        (click)="toggleParent('csc-ops')"
+        [ngClass]="{ selected: activeParent === 'csc-ops' }"
+      >
+        <img src="operation.png" alt="" />
+        Service CSC OPS
+      </li>
+      <ul *ngIf="activeParent === 'csc-ops' && userAccess.cscOps">
         <li
-          (click)="toggleParent('csc-ops')"
-          [ngClass]="{ selected: activeParent === 'csc-ops' }"
+          *ngFor="let guide of cscOps"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
         >
-          <img src="operation.png" alt="" />
-          Service CSC OPS
+          {{ guide.name }}
         </li>
-        <ul *ngIf="activeParent === 'csc-ops'">
-          <li
-            *ngFor="let guide of cscOps"
-            (click)="navigateTo(guide.route)"
-            [ngClass]="{ selected: activeRoute === guide.route }"
-          >
-            {{ guide.name }}
-          </li>
-        </ul>
-      </ng-container>
+      </ul>
 
-      <!-- Finance  -->
-      <ng-container *ngIf="userAccess.finance">
+      <!-- Finance -->
+      <li
+        *ngIf="userAccess.finance"
+        (click)="toggleParent('finance')"
+        [ngClass]="{ selected: activeParent === 'finance' }"
+      >
+        <img src="finance.png" alt="" />
+        Service Finance
+      </li>
+      <ul *ngIf="activeParent === 'finance' && userAccess.finance">
         <li
-          (click)="toggleParent('finance')"
-          [ngClass]="{ selected: activeParent === 'finance' }"
+          *ngFor="let guide of finance"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
         >
-          <img src="finance.png" alt="" />
-          Service Finance
+          {{ guide.name }}
         </li>
-        <ul *ngIf="activeParent === 'finance'">
-          <li
-            *ngFor="let guide of finance"
-            (click)="navigateTo(guide.route)"
-            [ngClass]="{ selected: activeRoute === guide.route }"
-          >
-            {{ guide.name }}
-          </li>
-        </ul>
-      </ng-container>
+      </ul>
 
-      <!-- Conformité  -->
-      <ng-container *ngIf="userAccess.conformite">
+      <!-- Conformité -->
+      <li
+        *ngIf="userAccess.conformite"
+        (click)="toggleParent('conformite')"
+        [ngClass]="{ selected: activeParent === 'conformite' }"
+      >
+        <img src="conformite.png" alt="" />
+        Service Conformité
+      </li>
+      <ul *ngIf="activeParent === 'conformite' && userAccess.conformite">
         <li
-          (click)="toggleParent('conformite')"
-          [ngClass]="{ selected: activeParent === 'conformite' }"
+          *ngFor="let guide of conformite"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
         >
-          <img src="conformite.png" alt="" />
-          Service Conformité
+          {{ guide.name }}
         </li>
-        <ul *ngIf="activeParent === 'conformite'">
-          <li
-            *ngFor="let guide of conformite"
-            (click)="navigateTo(guide.route)"
-            [ngClass]="{ selected: activeRoute === guide.route }"
-          >
-            {{ guide.name }}
-          </li>
-        </ul>
-      </ng-container>
+      </ul>
 
-      <!-- Marketing  -->
-      <ng-container *ngIf="userAccess.marketing">
+      <!-- Marketing -->
+      <li
+        *ngIf="userAccess.marketing"
+        (click)="toggleParent('marketing')"
+        [ngClass]="{ selected: activeParent === 'marketing' }"
+      >
+        <img src="marketing.png" alt="" />
+        Service Marketing
+      </li>
+      <ul *ngIf="activeParent === 'marketing' && userAccess.marketing">
         <li
-          (click)="toggleParent('marketing')"
-          [ngClass]="{ selected: activeParent === 'marketing' }"
+          *ngFor="let guide of marketing"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
         >
-          <img src="marketing.png" alt="" />
-          Service Marketing
+          {{ guide.name }}
         </li>
-        <ul *ngIf="activeParent === 'marketing'">
-          <li
-            *ngFor="let guide of marketing"
-            (click)="navigateTo(guide.route)"
-            [ngClass]="{ selected: activeRoute === guide.route }"
-          >
-            {{ guide.name }}
-          </li>
-        </ul>
-      </ng-container>
+      </ul>
 
-       <!-- IT  -->
-      <ng-container *ngIf="userAccess.it">
+      <!-- IT -->
+      <li
+        *ngIf="userAccess.it"
+        (click)="toggleParent('IT')"
+        [ngClass]="{ selected: activeParent === 'IT' }"
+      >
+        <img src="it.png" alt="" />
+        Service IT
+      </li>
+      <ul *ngIf="activeParent === 'IT' && userAccess.it">
         <li
-          (click)="toggleParent('IT')"
-          [ngClass]="{ selected: activeParent === 'IT' }"
+          *ngFor="let guide of it"
+          (click)="navigateTo(guide.route)"
+          [ngClass]="{ selected: activeRoute === guide.route }"
         >
-          <img src="it.png" alt="" />
-          Service IT
+          {{ guide.name }}
         </li>
-        <ul *ngIf="activeParent === 'IT'">
-          <li
-            *ngFor="let guide of it"
-            (click)="navigateTo(guide.route)"
-            [ngClass]="{ selected: activeRoute === guide.route }"
-          >
-            {{ guide.name }}
-          </li>
-        </ul>
-      </ng-container>
+      </ul>
     </ul>
   </div>
 
   <div class="content">
     <router-outlet></router-outlet>
   </div>
-</div>
- -->
+</div> 
+

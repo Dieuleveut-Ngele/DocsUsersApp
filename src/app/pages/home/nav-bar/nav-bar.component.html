@@ -7,76 +7,76 @@
     />
     FLASH
   </h1>
+
   <nav class="nav-links">
-    <a
-      class="nav-item"
-      routerLink="/home"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      >Home</a
-    >
-    <a
-      class="nav-item"
-      routerLink="/docs"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      >Docs</a
-    >
-    <a
-      class="nav-item"
-      routerLink="/faq"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      >FAQ</a
-    >
-    <a
-      class="nav-item"
-      routerLink="/glossaire"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      >Glossaire</a
-    >
+    <a class="nav-item" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      Home
+    </a>
+    <a class="nav-item" routerLink="/docs" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      Docs
+    </a>
+    <a class="nav-item" routerLink="/faq" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      FAQ
+    </a>
+    <a class="nav-item" routerLink="/glossaire" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      Glossaire
+    </a>
   </nav>
 
-  <!-- Bouton de recherche -->
   <div class="search-container">
-    <button class="search-btn" (click)="openPopup()">🔍</button>
-
-    <!-- Input de recherche -->
-    <div *ngIf="showPopup" class="popup-overlay">
-      <div class="search-popup">
+    <!-- CAS 1 : DOCUMENT OUVERT (champ inline dans navbar) -->
+    <div *ngIf="isDocContext; else popupMode" class="search-inline">
+      <div class="search-input-wrapper-inline">
         <input
           type="text"
-          class="search-input"
-          placeholder="🔍 Recherche..."
+          class="search-input-inline"
+          placeholder="Rechercher dans ce document..."
           [(ngModel)]="searchQuery"
-          (input)="searchDocs()"
-          autofocus
+          (input)="onSearchChange()"
         />
-
-        <!-- Bouton pour fermer le popup -->
-        <button class="close-btn" (click)="closePopup()">
-          <img src="retirer.png" alt="" class="close-btn-img" />
-        </button>
-
-        <!-- Résultats de recherche -->
-        <div class="search-results" *ngIf="searchQuery">
-          <ul *ngIf="filteredDocs.length > 0">
-            <li
-              *ngFor="let doc of filteredDocs"
-              (click)="navigateTo(doc.route)"
-            >
-              <span class="result-title">{{ doc.name }}</span>
-              <span class="result-type">Voir</span>
-            </li>
-          </ul>
-          <p *ngIf="filteredDocs.length === 0" class="no-results">
-            Aucun résultat n'a été trouvé.
-          </p>
-        </div>
+        <button *ngIf="searchQuery" class="clear-btn-inline" (click)="clearSearch()">✖</button>
       </div>
     </div>
-  </div>
 
-  <!-- <button class="contact-btn">Nous contacter</button> -->
+    <!-- CAS 2 : AUTRE PAGE (popup global) -->
+    <ng-template #popupMode>
+      <button class="search-btn" (click)="openPopup()">🔍</button>
+
+      <div *ngIf="showPopup" class="popup-overlay">
+        <div class="search-popup">
+          <div class="search-input-wrapper">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="🔍 Recherche globale..."
+              [(ngModel)]="searchQuery"
+              (input)="onSearchChange()"
+              autofocus
+            />
+            <button *ngIf="searchQuery" class="clear-btn" (click)="clearSearch()">✖</button>
+          </div>
+
+          <button class="close-btn" (click)="closePopup()">esc</button>
+
+          <div class="search-results" *ngIf="searchQuery">
+            <ul *ngIf="filteredDocs.length > 0">
+              <li *ngFor="let doc of filteredDocs" (click)="navigateTo(doc.route)">
+                <span class="result-title">{{ doc.name }}</span>
+                <span class="result-type">Voir</span>
+              </li>
+            </ul>
+            <p *ngIf="filteredDocs.length === 0" class="no-results">Aucun résultat trouvé.</p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
 </header>
+
+
+
+
+
+
+
+
