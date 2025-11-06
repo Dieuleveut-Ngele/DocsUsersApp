@@ -74,19 +74,19 @@ export class UserAccessService {
 
   constructor() {}
 
-  // Simulation du backend (tu peux modifier les valeurs ici)
+  // Simulation du backend 
   getUserAccess(): Observable<UserAccess> {
     const mockAccess: UserAccess = {
       finance: true,
       it: true,
       conformite: true,
-      cscOps: false,
-      marketing: false
+      cscOps: true,
+      marketing: true
     };
 
     console.log(' Mock API -> Accès utilisateur simulés :', mockAccess);
 
-    // Simule un délai réseau
+    // Simulation délai réseau
     return of(mockAccess).pipe(delay(400));
   }
 }

@@ -176,8 +176,7 @@ header {
 .nav-links a:hover {
   color: #ffc700;
   border-bottom: 1px solid #ffc700;
-  
-  
+ 
 }
 
 .nav-item.active {
@@ -209,8 +208,6 @@ header {
   padding: 10px;
 }
 
-
-
 .search-btn {
   background-color: #ffffff;
   border: 2px solid #ffc700;
@@ -224,41 +221,39 @@ header {
   padding: 10px;
 }
 
-
-
 /* Wrapper de l'input et du bouton */
 .search-input-wrapper-inline {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc; /* Bordure initiale */
-    border-radius: 30px; /* Coins arrondis pour un look moderne */
-    padding: 1px 40px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Légère ombre pour la profondeur */
+    border: 1px solid #ccc; 
+    border-radius: 30px; 
+    padding: 2.5px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
     transition: border-color 0.3s, box-shadow 0.3s;
-    background-color: #fff; /* Fond blanc */
-    max-width: 600px; /* Limiter la largeur sur les grands écrans */
+    background-color: #fff; 
+    max-width: 800px;  
 }
 
 /* Effet de focus (quand l'utilisateur clique dedans) */
 .search-input-wrapper-inline:focus-within {
-    border-color: #007bff; /* Couleur d'accent (bleu) */
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Anneau de focus élégant */
+    border-color: #007bff; 
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); 
 }
 
 /* Style de l'Input */
-.search-input-inline {
-    
-    border: none; /* Supprimer la bordure par défaut */
-    outline: none; /* Supprimer l'anneau de focus par défaut */
+.search-input-inline { 
+    border: none; 
+    outline: none; 
     padding: 5px 0;
     font-size: 15px;
     color: #333;
-    /* Assurez-vous que le placeholder est lisible */
 }
 
-.search-input-inline::placeholder {
+.search-input-wrapper-inline::placeholder {
     color: #999;
-}
+    padding-right: 30px;
+    
+}    
 
 /* Style du bouton de suppression (X) */
 .clear-btn-inline {
